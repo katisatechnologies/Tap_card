@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const totalRings = 3; // total number of rings
@@ -18,9 +19,9 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#0B0F1A] overflow-visible">
       
-      {/* Background glows */} 
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl">
-      </div> <div className="absolute top-1/3 -right-32 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+      {/* Background glows */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
 
       {/* Top-left rings */}
       <div className="absolute -top-24 -left-32 w-80 h-80 overflow-visible z-10">
@@ -36,37 +37,107 @@ export default function Hero() {
         {visibleRings >= 3 && <div className="absolute inset-0 m-auto w-52 h-52 border-2 border-white/10 rounded-full animate-pulse"></div>}
       </div>
 
-      <div className="relative max-w-7xl mx-auto text-center z-20">
-        {/* Heading */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-          Share Your Contact <br />
-          <span className="bg-gradient-to-r from-indigo-400 to-blue-200 bg-clip-text text-transparent">
-            In One Tap
-          </span>
-        </h1>
+      <div className="relative max-w-7xl mx-auto z-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Side - Content */}
+          <div className="text-center lg:text-left">
+            {/* Heading */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+              Share Your Contact <br />
+              <span className="bg-gradient-to-r from-indigo-400 to-blue-200 bg-clip-text text-transparent">
+                In One Tap
+              </span>
+            </h1>
 
-        <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-          A smart NFC Tap Card to instantly share your profile, socials, and contact details —
-          no apps, no typing.
-        </p>
+            <p className="text-xl sm:text-2xl text-gray-300 mb-12">
+              A smart NFC Tap Card to instantly share your profile, socials, and contact details —
+              no apps, no typing.
+            </p>
 
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-          <a
-            href="#pricing"
-            className="bg-gradient-to-r from-[#00193e] to-[#008cffdb] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition"
-          >
-            Get Your TapCard
-          </a>
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="#pricing"
+                className="bg-gradient-to-r from-[#00193e] to-[#008cffdb] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition text-center"
+              >
+                Get Your TapCard
+              </a>
 
-          <a
-            href="#how-it-works"
-            className="border border-white/20 text-white px-10 py-4 rounded-full text-lg font-semibold backdrop-blur hover:bg-white/10 transition"
-          >
-            See How It Works
-          </a>
+              <a
+                href="#how-it-works"
+                className="border border-white/20 text-white px-10 py-4 rounded-full text-lg font-semibold backdrop-blur hover:bg-white/10 transition text-center"
+              >
+                See How It Works
+              </a>
+            </div>
+          </div>
+
+          {/* Right Side - Card & Stage Image */}
+          <div className="flex flex-col items-center gap-8 lg:gap-8">
+            {/* Rotating Glass Card */}
+            <div className="relative w-80 h-48 perspective-1000">
+              <div className="absolute inset-0 animate-rotate-slow preserve-3d">
+                {/* Glass Card */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between">
+                  {/* Card Content */}
+                  <div className="flex justify-between items-start">
+                    <div className="text-left">
+                      <h3 className="text-white font-bold text-xl">TapCard</h3>
+                      <p className="text-gray-300 text-sm">Smart NFC</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur"></div>
+                    <div className="text-left">
+                      <p className="text-white font-semibold text-base">Your Name</p>
+                      <p className="text-gray-400 text-sm">tap to connect</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stage Image */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/hore.png"
+                alt="Tap Card Preview"
+                width={260}
+                height={120}
+                className="rounded-xl"
+                priority
+              />
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        
+        .preserve-3d {
+          transform-style: preserve-3d;
+        }
+        
+        @keyframes rotate-slow {
+          0% {
+            transform: rotateY(0deg);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
+        }
+        
+        .animate-rotate-slow {
+          animation: rotate-slow 8s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

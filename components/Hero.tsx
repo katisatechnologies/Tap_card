@@ -1,46 +1,72 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function Hero() {
+  const totalRings = 3; // total number of rings
+  const [visibleRings, setVisibleRings] = useState(0);
+
+  useEffect(() => {
+    let step = 0; // 0 means all invisible
+    const interval = setInterval(() => {
+      step = (step + 1) % (totalRings + 1); // cycle: 0 → 1 → 2 → 3 → 0 → ...
+      setVisibleRings(step);
+    }, 800); // change speed here
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-50 to-white">
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-dark mb-6 text-balance">
-          Share Your Contact in One Tap
+    <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#0B0F1A] overflow-visible">
+      
+      {/* Background glows */} 
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl">
+      </div> <div className="absolute top-1/3 -right-32 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+      {/* Top-left rings */}
+      <div className="absolute -top-24 -left-32 w-80 h-80 overflow-visible z-10">
+        {visibleRings >= 1 && <div className="absolute inset-0 m-auto w-16 h-16 border-2 border-white/10 rounded-full animate-pulse"></div>}
+        {visibleRings >= 2 && <div className="absolute inset-0 m-auto w-32 h-32 border-2 border-white/10 rounded-full animate-pulse"></div>}
+        {visibleRings >= 3 && <div className="absolute inset-0 m-auto w-52 h-52 border-2 border-white/10 rounded-full animate-pulse"></div>}
+      </div>
+
+      {/* Bottom-right rings */}
+      <div className="absolute top-1/3 -right-40 w-80 h-80 overflow-visible z-10">
+        {visibleRings >= 1 && <div className="absolute inset-0 m-auto w-11 h-11 border-2 border-white/10 rounded-full animate-pulse"></div>}
+        {visibleRings >= 2 && <div className="absolute inset-0 m-auto w-28 h-28 border-2 border-white/10 rounded-full animate-pulse"></div>}
+        {visibleRings >= 3 && <div className="absolute inset-0 m-auto w-52 h-52 border-2 border-white/10 rounded-full animate-pulse"></div>}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto text-center z-20">
+        {/* Heading */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+          Share Your Contact <br />
+          <span className="bg-gradient-to-r from-indigo-400 to-blue-200 bg-clip-text text-transparent">
+            In One Tap
+          </span>
         </h1>
-        <p className="text-xl sm:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto text-balance">
-          No apps. No typing. Just tap your card and your contact details open instantly on any phone.
+
+        <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          A smart NFC Tap Card to instantly share your profile, socials, and contact details —
+          no apps, no typing.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a 
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
+          <a
             href="#pricing"
-            className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl w-full sm:w-auto"
+            className="bg-gradient-to-r from-[#00193e] to-[#008cffdb] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition"
           >
-            Get Your TapShare Card
+            Get Your TapCard
           </a>
-          <a 
+
+          <a
             href="#how-it-works"
-            className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition w-full sm:w-auto"
+            className="border border-white/20 text-white px-10 py-4 rounded-full text-lg font-semibold backdrop-blur hover:bg-white/10 transition"
           >
             See How It Works
           </a>
         </div>
-
-        {/* Hero Visual */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-indigo-500 to-pink-500 rounded-3xl p-8 sm:p-12 shadow-2xl">
-            <div className="bg-white rounded-2xl p-8 aspect-video flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-2xl font-bold text-gray-800 mb-2">Tap Card</p>
-                <p className="text-gray-600">Instant contact sharing</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-  )
+  );
 }

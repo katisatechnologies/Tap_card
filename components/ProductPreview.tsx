@@ -1,6 +1,6 @@
 export default function ProductPreview() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-50 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">What You Get</h2>
@@ -11,7 +11,7 @@ export default function ProductPreview() {
           {/* Physical Card */}
           <div>
             <div className="bg-gradient-to-br from-dark to-gray-800 rounded-3xl p-8 shadow-2xl">
-              <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 aspect-[1.6/1] flex flex-col justify-between">
+              <div className="bg-gradient-to-br from-indigo-500 to-pink-500 rounded-2xl p-8 aspect-[1.6/1] flex flex-col justify-between">
                 <div>
                   <div className="text-white text-2xl font-bold mb-2">TapShare</div>
                   <div className="text-white/80 text-sm">NFC Business Card</div>
@@ -43,7 +43,7 @@ export default function ProductPreview() {
             <div className="bg-white rounded-3xl shadow-2xl p-6 max-w-sm mx-auto border-8 border-gray-800">
               <div className="space-y-6">
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4"></div>
+                  <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-full mx-auto mb-4"></div>
                   <h3 className="text-2xl font-bold text-dark">Your Name</h3>
                   <p className="text-gray-600">Your Title / Business Name</p>
                 </div>

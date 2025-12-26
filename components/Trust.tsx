@@ -47,7 +47,7 @@ export default function Trust() {
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-blue-50 rounded-2xl p-8">
+            <div key={index} className="bg-indigo-50 rounded-2xl p-8">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">

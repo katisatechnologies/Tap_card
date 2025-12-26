@@ -43,7 +43,7 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="bg-blue-50 rounded-2xl p-8 text-center hover:shadow-lg transition">
+              <div className="bg-indigo-50 rounded-2xl p-8 text-center hover:shadow-lg transition">
                 <div className="text-primary mb-4 flex justify-center">
                   {step.icon}
                 </div>

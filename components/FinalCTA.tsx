@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary to-secondary">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-pink-600">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
           Start Sharing Your Contact the Smart Way

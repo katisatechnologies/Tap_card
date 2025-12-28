@@ -2,8 +2,7 @@ export default function Pricing() {
   const plans = [
     {
       name: "Single Card",
-      price: "LKR 1,500",
-      description: "Perfect for trying out",
+      subtitle: "Smart Business Card",
       features: [
         "1 NFC Card",
         "Custom design",
@@ -11,13 +10,13 @@ export default function Pricing() {
         "Unlimited updates",
         "WhatsApp support"
       ],
-      cta: "Order Now",
-      popular: false
+      cta: "Pre-Order Now",
+      popular: false,
+      badge: null
     },
     {
       name: "Business Pack",
-      price: "LKR 12,000",
-      description: "Best value for teams",
+      subtitle: "Smart Business Card",
       features: [
         "10 NFC Cards",
         "Custom branding",
@@ -26,71 +25,123 @@ export default function Pricing() {
         "Priority support",
         "Free delivery"
       ],
-      cta: "Get Started",
-      popular: true
+      cta: "Pre-Order Now",
+      popular: true,
+      badge: "MOST POPULAR"
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      description: "For large organizations",
+      name: "Company Card",
+      subtitle: "Smart Business Card",
       features: [
-        "Bulk orders (50+)",
-        "Advanced branding",
-        "Analytics dashboard",
-        "Team management",
-        "Dedicated support",
-        "Volume discounts"
+        "5 NFC Cards",
+        "Company branding",
+        "Individual profiles",
+        "Unlimited updates",
+        "Priority support"
       ],
-      cta: "Contact Sales",
-      popular: false
+      cta: "Pre-Order Now",
+      popular: false,
+      badge: null
+    },
+    {
+      name: "Custom Card",
+      subtitle: "Smart Business Card",
+      features: [
+        "Fully customizable design",
+        "Premium materials",
+        "Digital profile page",
+        "Choose any profile type",
+        "Priority support"
+      ],
+      cta: "Pre-Order Now",
+      popular: false,
+      badge: "BEST VALUE"
     }
   ]
 
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-[#0B0F1A]">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0B0F1A]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Simple Pricing</h2>
-          <p className="text-xl text-gray-300">No hidden fees. No subscriptions.</p>
+          <div className="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
+            🚀 Coming Soon - Pre-Order Now!
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Choose Your TapShare Card</h2>
+          <p className="text-xl text-gray-300">Reserve your card now. Special launch pricing for early birds!</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`bg-gray-800/50 backdrop-blur-sm border rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl ${
-                plan.popular ? 'border-primary ring-2 ring-primary/50 shadow-primary/20 transform scale-105' : 'border-gray-700 hover:border-gray-600'
-              }`}
+              className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2"
             >
-              {plan.popular && (
-                <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-center py-2 text-sm font-semibold">
-                  MOST POPULAR
+              <div className="p-6">
+                {/* Header with Badge */}
+                <div className="text-center mb-4 min-h-[60px]">
+                  {plan.badge && (
+                    <div className={`inline-block mb-2 ${
+                      plan.popular 
+                        ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' 
+                        : 'bg-gradient-to-r from-green-500 to-emerald-600'
+                    } text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg`}>
+                      {plan.badge}
+                    </div>
+                  )}
+                  <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
+                  <p className="text-sm text-gray-400">{plan.subtitle}</p>
                 </div>
-              )}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+
+                {/* Card Image */}
+                <div className="relative mb-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 h-40 flex items-center justify-center">
+                  <div className="relative w-full h-full perspective-500">
+                    <div className="absolute inset-0 animate-float">
+                      <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-4 flex flex-col justify-between transform hover:scale-105 transition-transform">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <p className="text-white font-bold text-sm">TapShare</p>
+                            <p className="text-gray-400 text-xs">NFC Card</p>
+                          </div>
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded bg-white/20 backdrop-blur"></div>
+                          <div>
+                            <p className="text-white text-xs font-semibold">Your Name</p>
+                            <p className="text-gray-400 text-xs">tap to connect</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <ul className="space-y-3 mb-8">
+
+                {/* Pre-Order Notice */}
+                <div className="mb-6 text-center">
+                  <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl py-3 px-4">
+                    <p className="text-indigo-400 font-semibold text-sm">Launch Price</p>
+                    <p className="text-white text-lg font-bold">Coming Soon</p>
+                    <p className="text-gray-400 text-xs mt-1">Early bird discount available</p>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <li key={idx} className="flex items-start text-sm">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
+
+                {/* CTA Button */}
                 <a 
-                  href="https://wa.me/94771234567?text=Hi! I want to order TapShare cards"
+                  href="https://wa.me/94771234567?text=Hi! I want to pre-order TapShare cards"
                   target="_blank"
-                  className={`block text-center py-3 rounded-xl font-semibold transition ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white hover:from-indigo-700 hover:to-blue-700 shadow-lg shadow-indigo-500/30'
-                      : 'bg-gray-700 text-white hover:bg-gray-600 border border-gray-600'
-                  }`}
+                  className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30"
                 >
                   {plan.cta}
                 </a>
@@ -100,7 +151,7 @@ export default function Pricing() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-4">All plans include:</p>
+          <p className="text-gray-300 mb-4">All plans will include:</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
             <span>✓ Free shipping in Colombo</span>
             <span>✓ Lifetime card validity</span>
@@ -108,6 +159,25 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .perspective-500 {
+          perspective: 500px;
+        }
+        
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px) rotateY(-15deg);
+          }
+          50% {
+            transform: translateY(-10px) rotateY(-15deg);
+          }
+        }
+        
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   )
 }

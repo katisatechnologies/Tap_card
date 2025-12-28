@@ -31,7 +31,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
       <div className="text-center relative">
         {/* Animated background glow */}
         <motion.div
-          className="absolute -inset-32 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-3xl"
+          className="absolute -inset-32 bg-gradient-to-r from-indigo-500/20 to-blue-400/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -106,7 +106,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <motion.div
-                className="absolute inset-0 border-2 border-pink-400 rounded-full"
+                className="absolute inset-0 border-2 border-blue-400 rounded-full"
                 animate={{ scale: [0.8, 1.5], opacity: [0.8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
@@ -115,7 +115,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
                 animate={{ scale: [0.8, 1.5], opacity: [0.8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-full"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-blue-200 rounded-full"></div>
             </div>
           </motion.div>
 
@@ -123,7 +123,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
           <div className="w-64 mx-auto">
             <div className="h-1 bg-white/10 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-indigo-500 to-pink-500"
+                className="h-full bg-gradient-to-r from-indigo-400 to-blue-200"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.3 }}

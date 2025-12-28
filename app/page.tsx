@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
 import WhyTapShare from '@/components/WhyTapShare'
@@ -9,8 +12,15 @@ import FAQ from '@/components/FAQ'
 import FinalCTA from '@/components/FinalCTA'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import LoadingScreen from '@/components/LoadingScreen'
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
+  }
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />

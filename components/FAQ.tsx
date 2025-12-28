@@ -41,21 +41,21 @@ export default function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">Questions?</h2>
-          <p className="text-xl text-gray-600">Everything you need to know</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Questions?</h2>
+          <p className="text-xl text-gray-300">Everything you need to know</p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+            <div key={index} className="border border-gray-700 rounded-xl overflow-hidden bg-gray-800/50">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-800 transition"
               >
-                <span className="font-semibold text-dark text-lg pr-4">{faq.question}</span>
+                <span className="font-semibold text-white text-lg pr-4">{faq.question}</span>
                 <svg 
                   className={`w-6 h-6 text-primary flex-shrink-0 transition-transform ${
                     openIndex === index ? 'transform rotate-180' : ''
@@ -69,7 +69,7 @@ export default function FAQ() {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -77,7 +77,7 @@ export default function FAQ() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
+          <p className="text-gray-300 mb-4">Still have questions?</p>
           <a 
             href="https://wa.me/94771234567?text=Hi! I have a question about TapShare"
             target="_blank"

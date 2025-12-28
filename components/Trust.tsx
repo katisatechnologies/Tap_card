@@ -27,27 +27,27 @@ export default function Trust() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* Stats */}
         <div className="grid sm:grid-cols-3 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-5xl font-bold text-primary mb-2">{stat.number}</div>
-              <div className="text-gray-600 text-lg">{stat.label}</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent mb-2">{stat.number}</div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
           ))}
         </div>
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">Trusted by Local Businesses</h2>
-          <p className="text-xl text-gray-600">See what our customers say</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Trusted by Local Businesses</h2>
+          <p className="text-xl text-gray-300">See what our customers say</p>
         </div>
 
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-indigo-50 rounded-2xl p-8">
+            <div key={index} className="bg-gray-800/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -55,10 +55,10 @@ export default function Trust() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+              <p className="text-gray-300 mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
               <div>
-                <div className="font-bold text-dark">{testimonial.author}</div>
-                <div className="text-sm text-gray-600">{testimonial.business}</div>
+                <div className="font-bold text-white">{testimonial.author}</div>
+                <div className="text-sm text-gray-400">{testimonial.business}</div>
               </div>
             </div>
           ))}
@@ -66,7 +66,7 @@ export default function Trust() {
 
         {/* Trust Badges */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">Delivering across Sri Lanka</p>
+          <p className="text-gray-300 mb-6">Delivering across Sri Lanka</p>
           <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
             <div className="text-2xl font-bold text-gray-400">Colombo</div>
             <div className="text-2xl font-bold text-gray-400">Kandy</div>

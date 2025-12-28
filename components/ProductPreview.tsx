@@ -20,7 +20,7 @@ export default function ProductPreview() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-50 to-white overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-[#0B0F1A] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -29,8 +29,8 @@ export default function ProductPreview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">What You Get</h2>
-          <p className="text-xl text-gray-600">Premium card + Smart profile page</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">What You Get</h2>
+          <p className="text-xl text-gray-300">Premium card + Smart profile page</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -92,7 +92,7 @@ export default function ProductPreview() {
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                   />
-                  <span className="text-gray-700">{text}</span>
+                  <span className="text-white">{text}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -223,7 +223,7 @@ export default function ProductPreview() {
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                   />
-                  <span className="text-gray-700">{text}</span>
+                  <span className="text-white">{text}</span>
                 </motion.div>
               ))}
             </motion.div>

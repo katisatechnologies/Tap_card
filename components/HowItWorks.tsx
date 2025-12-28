@@ -33,23 +33,23 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">How It Works</h2>
-          <p className="text-xl text-gray-600">Three simple steps to modern networking</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">How It Works</h2>
+          <p className="text-xl text-gray-300">Three simple steps to modern networking</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="bg-indigo-50 rounded-2xl p-8 text-center hover:shadow-lg transition">
-                <div className="text-primary mb-4 flex justify-center">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center hover:shadow-xl hover:shadow-indigo-500/10 hover:border-gray-600 transition-all duration-300">
+                <div className="text-indigo-400 mb-4 flex justify-center">
                   {step.icon}
                 </div>
-                <div className="text-5xl font-bold text-primary/20 mb-4">{step.number}</div>
-                <h3 className="text-2xl font-bold text-dark mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-lg">{step.description}</p>
+                <div className="text-5xl font-bold text-indigo-500/20 mb-4">{step.number}</div>
+                <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300 text-lg">{step.description}</p>
               </div>
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-6 transform -translate-y-1/2">

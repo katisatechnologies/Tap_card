@@ -20,7 +20,7 @@ export default function Navbar() {
             <a href="#pricing" className="text-gray-700 hover:text-primary transition">Pricing</a>
             <a href="#faq" className="text-gray-700 hover:text-primary transition">FAQ</a>
             <a 
-              href="https://wa.me/94771234567?text=Hi! I'm interested in TapShare NFC cards" 
+              href="https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20IDORA%20NFC%20cards.%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20learn%20more." 
               target="_blank"
               className="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
             >
@@ -53,7 +53,7 @@ export default function Navbar() {
             <a href="#pricing" className="block py-2 text-gray-700">Pricing</a>
             <a href="#faq" className="block py-2 text-gray-700">FAQ</a>
             <a 
-              href="https://wa.me/94771234567?text=Hi! I'm interested in IDORA NFC cards" 
+              href="https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20IDORA%20NFC%20cards.%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20learn%20more." 
               target="_blank"
               className="block bg-primary text-white px-6 py-2 rounded-full text-center"
             >

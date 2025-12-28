@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-white/70">
-              <li>WhatsApp: +94 77 123 4567</li>
+              <li>WhatsApp: +94 70 120 0064</li>
               <li>Email: hello@idora.lk</li>
               <li>Colombo, Sri Lanka</li>
             </ul>

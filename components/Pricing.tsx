@@ -12,7 +12,8 @@ export default function Pricing() {
       ],
       cta: "Pre-Order Now",
       popular: false,
-      badge: null
+      badge: null,
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Single%20Card%20from%20IDORA.%20I%27m%20interested%20in%201%20NFC%20card%20with%20custom%20design.%20Please%20share%20more%20details!"
     },
     {
       name: "Business Pack",
@@ -27,7 +28,8 @@ export default function Pricing() {
       ],
       cta: "Pre-Order Now",
       popular: true,
-      badge: "MOST POPULAR"
+      badge: "MOST POPULAR",
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Business%20Pack%20from%20IDORA.%20I%27m%20interested%20in%2010%20NFC%20cards%20with%20custom%20branding%20for%20my%20team.%20Please%20share%20pricing%20and%20details!"
     },
     {
       name: "Company Card",
@@ -41,7 +43,8 @@ export default function Pricing() {
       ],
       cta: "Pre-Order Now",
       popular: false,
-      badge: null
+      badge: null,
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Company%20Card%20pack%20from%20IDORA.%20I%27m%20interested%20in%205%20NFC%20cards%20with%20company%20branding.%20Please%20provide%20more%20information!"
     },
     {
       name: "Custom Card",
@@ -55,7 +58,8 @@ export default function Pricing() {
       ],
       cta: "Pre-Order Now",
       popular: false,
-      badge: "BEST VALUE"
+      badge: "BEST VALUE",
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20a%20Custom%20Card%20from%20IDORA.%20I%27m%20interested%20in%20a%20fully%20customizable%20design%20with%20premium%20materials.%20Let%27s%20discuss%20my%20requirements!"
     }
   ]
 
@@ -139,7 +143,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <a 
-                  href="https://wa.me/94771234567?text=Hi! I want to pre-order IDORA cards"
+                  href={plan.whatsappLink}
                   target="_blank"
                   className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30"
                 >

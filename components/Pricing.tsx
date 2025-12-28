@@ -74,9 +74,9 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2"
+              className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2 flex flex-col"
             >
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 {/* Header with Badge */}
                 <div className="text-center mb-4 min-h-[60px]">
                   {plan.badge && (
@@ -93,7 +93,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Card Image */}
-                <div className="relative mb-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 h-40 flex items-center justify-center">
+                <div className="relative mb-6 rounded-2xl p-6 h-40 flex items-center justify-center">
                   <div className="relative w-full h-full perspective-500">
                     <div className="absolute inset-0 animate-float">
                       <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-4 flex flex-col justify-between transform hover:scale-105 transition-transform">
@@ -126,7 +126,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 flex-1">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-sm">
                       <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -141,7 +141,7 @@ export default function Pricing() {
                 <a 
                   href="https://wa.me/94771234567?text=Hi! I want to pre-order TapShare cards"
                   target="_blank"
-                  className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30"
+                  className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30 mt-auto"
                 >
                   {plan.cta}
                 </a>

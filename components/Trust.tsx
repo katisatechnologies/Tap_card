@@ -13,7 +13,7 @@ export default function Trust() {
       rating: 5
     },
     {
-      quote: "As a freelance photographer, I meet new clients every week. TapShare makes me look professional and saves so much time.",
+      quote: "As a freelance photographer, I meet new clients every week. IDORA makes me look professional and saves so much time.",
       author: "Ayesha R.",
       business: "Freelance Photographer",
       rating: 5

@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-white">TapShare</span>
+            <span className="text-2xl font-bold text-white">IDORA</span>
           </div>
 
           {/* Desktop Menu */}
@@ -53,7 +53,7 @@ export default function Navbar() {
             <a href="#pricing" className="block py-2 text-gray-700">Pricing</a>
             <a href="#faq" className="block py-2 text-gray-700">FAQ</a>
             <a 
-              href="https://wa.me/94771234567?text=Hi! I'm interested in TapShare NFC cards" 
+              href="https://wa.me/94771234567?text=Hi! I'm interested in IDORA NFC cards" 
               target="_blank"
               className="block bg-primary text-white px-6 py-2 rounded-full text-center"
             >

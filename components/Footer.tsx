@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">TapShare</h3>
+            <h3 className="text-2xl font-bold mb-4">IDORA</h3>
             <p className="text-white/70">Modern contact sharing for Sri Lankan businesses</p>
           </div>
 
@@ -32,7 +32,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-white/70">
               <li>WhatsApp: +94 77 123 4567</li>
-              <li>Email: hello@tapshare.lk</li>
+              <li>Email: hello@idora.lk</li>
               <li>Colombo, Sri Lanka</li>
             </ul>
           </div>
@@ -40,7 +40,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © 2025 TapShare. All rights reserved.
+            © 2025 IDORA. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-white/60 hover:text-white transition">

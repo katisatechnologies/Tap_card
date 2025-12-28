@@ -8,7 +8,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Does it work on iPhone?",
-      answer: "Yes! TapShare works on all iPhones (iPhone 7 and newer) and all Android phones with NFC. No app download needed."
+      answer: "Yes! IDORA works on all iPhones (iPhone 7 and newer) and all Android phones with NFC. No app download needed."
     },
     {
       question: "Do customers need to download an app?",
@@ -36,7 +36,7 @@ export default function FAQ() {
     },
     {
       question: "What if NFC doesn't work?",
-      answer: "Every TapShare card also includes a QR code backup. If NFC fails, people can scan the QR code instead."
+      answer: "Every IDORA card also includes a QR code backup. If NFC fails, people can scan the QR code instead."
     }
   ]
 
@@ -79,7 +79,7 @@ export default function FAQ() {
         <div className="text-center mt-12">
           <p className="text-gray-300 mb-4">Still have questions?</p>
           <a 
-            href="https://wa.me/94771234567?text=Hi! I have a question about TapShare"
+            href="https://wa.me/94771234567?text=Hi! I have a question about IDORA"
             target="_blank"
             className="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition"
           >

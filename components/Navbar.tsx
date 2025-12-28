@@ -6,16 +6,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+    <nav className="fixed top-0 w-full bg-[#0B0F1A]/95 backdrop-blur-sm z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-dark">TapShare</span>
+            <span className="text-2xl font-bold text-white">TapShare</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-gray-700 hover:text-primary transition">How It Works</a>
+            <a href="#how-it-works" className="text-gray-300 hover:text-primary transition">How It Works</a>
             <a href="#use-cases" className="text-gray-700 hover:text-primary transition">Use Cases</a>
             <a href="#pricing" className="text-gray-700 hover:text-primary transition">Pricing</a>
             <a href="#faq" className="text-gray-700 hover:text-primary transition">FAQ</a>

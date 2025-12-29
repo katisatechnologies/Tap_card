@@ -1,9 +1,5 @@
 export default function Trust() {
-  const stats = [
-    { number: "500+", label: "Cards Delivered" },
-    { number: "200+", label: "Happy Businesses" },
-    { number: "10,000+", label: "Contacts Shared" }
-  ]
+
 
   const testimonials = [
     {
@@ -29,15 +25,7 @@ export default function Trust() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-7xl mx-auto">
-        {/* Stats */}
-        <div className="grid sm:grid-cols-3 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent mb-2">{stat.number}</div>
-              <div className="text-gray-300 text-lg">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+
 
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Trusted by Local Businesses</h2>

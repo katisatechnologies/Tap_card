@@ -31,12 +31,12 @@ export default function Footer() {
               <li><button onClick={() => setShowTerms(true)} className="hover:text-white transition underline">Terms of Service</button></li>
                   {/* Privacy Policy Modal */}
                   {showPrivacy && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-                      <div className="bg-white text-black max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-xl p-8 relative">
-                        <button onClick={() => setShowPrivacy(false)} className="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-black">×</button>
-                        <h2 className="text-2xl font-bold mb-2">🔐 Privacy Policy</h2>
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-2 sm:px-0">
+                      <div className="bg-white text-black w-full max-w-xs sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl shadow-xl p-4 sm:p-8 relative">
+                        <button onClick={() => setShowPrivacy(false)} className="absolute top-2 right-2 sm:top-4 sm:right-4 text-2xl font-bold text-gray-500 hover:text-black">×</button>
+                        <h2 className="text-xl sm:text-2xl font-bold mb-2">🔐 Privacy Policy</h2>
                         <p className="text-xs mb-4 text-gray-500">Last updated: 29 December 2025</p>
-                        <div className="space-y-4 text-sm">
+                        <div className="space-y-4 text-xs sm:text-sm">
                           <p><b>1. Introduction</b></p>
                           <p>Welcome to IDORA, a digital identity and NFC-based business card platform operated by Katisa Technologies (“we”, “our”, “us”). Your privacy matters. This Privacy Policy explains how we collect, use, store, and protect your information when you use our website, services, and products.</p>
                           <p>By using IDORA, you agree to this Privacy Policy.</p>
@@ -65,12 +65,12 @@ export default function Footer() {
 
                   {/* Terms of Service Modal */}
                   {showTerms && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-                      <div className="bg-white text-black max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-xl p-8 relative">
-                        <button onClick={() => setShowTerms(false)} className="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-black">×</button>
-                        <h2 className="text-2xl font-bold mb-2">📜 Terms of Service</h2>
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-2 sm:px-0">
+                      <div className="bg-white text-black w-full max-w-xs sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl shadow-xl p-4 sm:p-8 relative">
+                        <button onClick={() => setShowTerms(false)} className="absolute top-2 right-2 sm:top-4 sm:right-4 text-2xl font-bold text-gray-500 hover:text-black">×</button>
+                        <h2 className="text-xl sm:text-2xl font-bold mb-2">📜 Terms of Service</h2>
                         <p className="text-xs mb-4 text-gray-500">Last updated: 29 December 2025</p>
-                        <div className="space-y-4 text-sm">
+                        <div className="space-y-4 text-xs sm:text-sm">
                           <p><b>1. Acceptance of Terms</b></p>
                           <p>By accessing or using IDORA, you agree to these Terms of Service. If you don’t agree — don’t use the service.</p>
                           <p><b>2. Description of Service</b></p>
@@ -104,7 +104,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-white/70">
               <li>WhatsApp: +94 70 120 0064</li>
-              <li>Email: hello@idora.lk</li>
+              <li>Email: katisatechnologies@gmail.com</li>
               <li>Colombo, Sri Lanka</li>
             </ul>
           </div>

@@ -41,10 +41,12 @@ const comparisons = [
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {comparisons.map((item, index) => (
             <div key={index} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10">
-            <div className="mb-4 w-16 h-16 flex items-center justify-center bg-white border border-gray-600 rounded-full p-3">
-              <img src={item.icon} alt={item.old} className="w-10 h-10 object-contain" />
-            </div>
-            
+              <div className="mb-4 w-16 h-16 flex items-center justify-center 
+                  bg-gradient-to-tr from-gray-100 to-blue-900 rounded-full p-3 
+                  shadow-lg transform transition-transform duration-300 hover:scale-110">
+                <img src={item.icon} alt={item.old} className="w-10 h-10 object-contain" />
+              </div>
+                            
               {/* Old Method Badge */}
               <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 rounded-lg px-3 py-1.5 mb-3">
                 <span className="text-red-400 text-xs font-bold uppercase tracking-wide">Outdated</span>

@@ -75,26 +75,29 @@ export default function Hero() {
 
           {/* Right Side - Card & Stage Image */}
           <div className="flex flex-col items-center gap-8 lg:gap-8">
-            {/* Rotating Glass Card */}
+            {/* 3D Rotating Card: Front and Back */}
             <div className="relative w-80 h-48 perspective-1000">
-              <div className="absolute inset-0 animate-rotate-slow preserve-3d">
-                {/* Glass Card */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between">
-                  {/* Card Content */}
-                  <div className="flex justify-between items-start">
-                    <div className="text-left">
-                      <h3 className="text-white font-bold text-xl">IDORA</h3>
-                      <p className="text-gray-300 text-sm">Smart NFC</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
+              <div className="absolute inset-0 flip-rotate-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <Image
+                      src="/images/front-card.png"
+                      alt="IDORA Card Front"
+                      width={320}
+                      height={192}
+                      className="w-full h-full object-contain rounded-2xl"
+                      priority
+                    />
                   </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur"></div>
-                    <div className="text-left">
-                      <p className="text-white font-semibold text-base">Your Name</p>
-                      <p className="text-gray-400 text-sm">tap to connect</p>
-                    </div>
+                  <div className="flip-card-back">
+                    <Image
+                      src="/images/idora-card.png"
+                      alt="IDORA Card Back"
+                      width={320}
+                      height={192}
+                      className="w-full h-full object-contain rounded-2xl"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
@@ -120,22 +123,41 @@ export default function Hero() {
         .perspective-1000 {
           perspective: 1000px;
         }
-        
-        .preserve-3d {
-          transform-style: preserve-3d;
+        .flip-rotate-card {
+          width: 100%;
+          height: 100%;
+          perspective: 1000px;
         }
-        
-        @keyframes rotate-slow {
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          animation: flip-rotate 10s linear infinite;
+        }
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+        .flip-card-front {
+          z-index: 2;
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+        @keyframes flip-rotate {
           0% {
             transform: rotateY(0deg);
+          }
+          50% {
+            transform: rotateY(180deg);
           }
           100% {
             transform: rotateY(360deg);
           }
-        }
-        
-        .animate-rotate-slow {
-          animation: rotate-slow 8s linear infinite;
         }
       `}</style>
     </section>

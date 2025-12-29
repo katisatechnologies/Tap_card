@@ -53,24 +53,21 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between preserve-3d">
-                <div className="flex justify-between items-start">
-                  <div className="text-left">
-                    <h3 className="text-white font-bold text-lg">IDORA</h3>
-                    <p className="text-gray-300 text-xs">Smart NFC</p>
+              <div className="absolute inset-0 flip-rotate-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img
+                      src="/images/front-card.png"
+                      alt="IDORA Card Front"
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
                   </div>
-                  <motion.div 
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur"></div>
-                  <div className="text-left">
-                    <p className="text-white font-semibold text-sm">Your Name</p>
-                    <p className="text-gray-400 text-xs">tap to connect</p>
+                  <div className="flip-card-back">
+                    <img
+                      src="/images/idora-card.png"
+                      alt="IDORA Card Back"
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
                   </div>
                 </div>
               </div>
@@ -145,9 +142,41 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
         .perspective-1000 {
           perspective: 1000px;
         }
-        
-        .preserve-3d {
+        .flip-rotate-card {
+          width: 100%;
+          height: 100%;
+          perspective: 1000px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
           transform-style: preserve-3d;
+          animation: flip-rotate 3s linear infinite;
+        }
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+        .flip-card-front {
+          z-index: 2;
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+        @keyframes flip-rotate {
+          0% {
+            transform: rotateY(0deg);
+          }
+          50% {
+            transform: rotateY(180deg);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
         }
       `}</style>
     </motion.div>

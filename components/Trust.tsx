@@ -1,47 +1,53 @@
 export default function Trust() {
 
 
+  // Pre-launch interest/feedback (not real reviews)
   const testimonials = [
     {
-      quote: "Our customers love it. They tap the card on the table and instantly have our menu and contact. Much better than paper cards.",
-      author: "Chaminda P.",
-      business: "Cafe Owner, Colombo 7",
-      rating: 5
+      quote: "Excited to try IDORA for my business when it launches! The NFC card idea sounds super convenient.",
+      author: "Sahan P.",
+      business: "Small Business Owner",
+      rating: 0
     },
     {
-      quote: "As a freelance photographer, I meet new clients every week. IDORA makes me look professional and saves so much time.",
-      author: "Ayesha R.",
-      business: "Freelance Photographer",
-      rating: 5
+      quote: "Looking forward to a modern way to share my contact details. Subscribed for updates!",
+      author: "Dilani W.",
+      business: "Freelancer",
+      rating: 0
     },
     {
-      quote: "We put these at our front desk. Visitors tap and get all our info. No more writing down numbers. Simple and modern.",
-      author: "Ranil F.",
-      business: "Business Center Manager",
-      rating: 5
+      quote: "Hope this will make networking at events much easier. Can't wait for the launch!",
+      author: "Ruwan F.",
+      business: "Event Attendee",
+      rating: 0
     }
   ]
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
-      <div className="max-w-7xl mx-auto">
 
+      <div className="max-w-7xl mx-auto">
+        {/* Launch Announcement Placeholder */}
+        <div className="flex flex-col items-center justify-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-yellow-500/90 text-black font-semibold px-4 py-2 rounded-full shadow-md mb-4 animate-pulse">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Launching Soon
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">IDORA is almost here!</h2>
+          <p className="text-lg text-gray-300 max-w-xl text-center">We're working hard to bring you the next generation of NFC business cards. Stay tuned for our official launch and be among the first to experience seamless digital networking in Sri Lanka.</p>
+        </div>
 
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Trusted by Local Businesses</h2>
           <p className="text-xl text-gray-300">See what our customers say</p>
         </div>
 
-        {/* Testimonials */}
+        {/* Pre-launch Feedback */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-800/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10">
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+              <div className="flex mb-4 justify-center">
+                <span className="inline-block bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full">Pre-launch Interest</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
               <div>

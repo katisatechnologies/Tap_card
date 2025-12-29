@@ -53,11 +53,24 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <img
-                src="/images/idora-card.png"
-                alt="IDORA NFC Card"
-                className="w-full h-full object-contain preserve-3d rounded-2xl"
-              />
+              <div className="absolute inset-0 flip-rotate-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img
+                      src="/images/front-card.png"
+                      alt="IDORA Card Front"
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </div>
+                  <div className="flip-card-back">
+                    <img
+                      src="/images/idora-card.png"
+                      alt="IDORA Card Back"
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -129,9 +142,41 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
         .perspective-1000 {
           perspective: 1000px;
         }
-        
-        .preserve-3d {
+        .flip-rotate-card {
+          width: 100%;
+          height: 100%;
+          perspective: 1000px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
           transform-style: preserve-3d;
+          animation: flip-rotate 3s linear infinite;
+        }
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+        .flip-card-front {
+          z-index: 2;
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+        @keyframes flip-rotate {
+          0% {
+            transform: rotateY(0deg);
+          }
+          50% {
+            transform: rotateY(180deg);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
         }
       `}</style>
     </motion.div>

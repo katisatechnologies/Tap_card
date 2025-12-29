@@ -75,17 +75,31 @@ export default function Hero() {
 
           {/* Right Side - Card & Stage Image */}
           <div className="flex flex-col items-center gap-8 lg:gap-8">
-            {/* Actual Card Image */}
+            {/* 3D Rotating Card: Front and Back */}
             <div className="relative w-80 h-48 perspective-1000">
-              <div className="absolute inset-0 animate-rotate-slow preserve-3d">
-                <Image
-                  src="/images/idora-card.png"
-                  alt="IDORA NFC Card"
-                  width={320}
-                  height={192}
-                  className="w-full h-full object-contain rounded-2xl"
-                  priority
-                />
+              <div className="absolute inset-0 flip-rotate-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <Image
+                      src="/images/front-card.png"
+                      alt="IDORA Card Front"
+                      width={320}
+                      height={192}
+                      className="w-full h-full object-contain rounded-2xl"
+                      priority
+                    />
+                  </div>
+                  <div className="flip-card-back">
+                    <Image
+                      src="/images/idora-card.png"
+                      alt="IDORA Card Back"
+                      width={320}
+                      height={192}
+                      className="w-full h-full object-contain rounded-2xl"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -109,22 +123,41 @@ export default function Hero() {
         .perspective-1000 {
           perspective: 1000px;
         }
-        
-        .preserve-3d {
-          transform-style: preserve-3d;
+        .flip-rotate-card {
+          width: 100%;
+          height: 100%;
+          perspective: 1000px;
         }
-        
-        @keyframes rotate-slow {
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          animation: flip-rotate 10s linear infinite;
+        }
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+        .flip-card-front {
+          z-index: 2;
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+        @keyframes flip-rotate {
           0% {
             transform: rotateY(0deg);
+          }
+          50% {
+            transform: rotateY(180deg);
           }
           100% {
             transform: rotateY(360deg);
           }
-        }
-        
-        .animate-rotate-slow {
-          animation: rotate-slow 8s linear infinite;
         }
       `}</style>
     </section>

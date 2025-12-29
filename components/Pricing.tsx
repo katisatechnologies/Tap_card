@@ -104,22 +104,11 @@ export default function Pricing() {
                 <div className="relative mb-6 rounded-2xl p-6 h-40 flex items-center justify-center">
                   <div className="relative w-full h-full perspective-500">
                     <div className="absolute inset-0 animate-float">
-                      <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-4 flex flex-col justify-between transform hover:scale-105 transition-transform">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <p className="text-white font-bold text-sm">IDORA</p>
-                            <p className="text-gray-400 text-xs">NFC Card</p>
-                          </div>
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 rounded bg-white/20 backdrop-blur"></div>
-                          <div>
-                            <p className="text-white text-xs font-semibold">Your Name</p>
-                            <p className="text-gray-400 text-xs">tap to connect</p>
-                          </div>
-                        </div>
-                      </div>
+                      <img
+                        src="/images/idora-card.png"
+                        alt="IDORA NFC Card"
+                        className="w-full h-full object-contain transform hover:scale-105 transition-transform rounded-2xl"
+                      />
                     </div>
                   </div>
                 </div>

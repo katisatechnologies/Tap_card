@@ -53,27 +53,11 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
               animate={{ rotateY: [0, 360] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between preserve-3d">
-                <div className="flex justify-between items-start">
-                  <div className="text-left">
-                    <h3 className="text-white font-bold text-lg">IDORA</h3>
-                    <p className="text-gray-300 text-xs">Smart NFC</p>
-                  </div>
-                  <motion.div 
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur"></div>
-                  <div className="text-left">
-                    <p className="text-white font-semibold text-sm">Your Name</p>
-                    <p className="text-gray-400 text-xs">tap to connect</p>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/images/idora-card.png"
+                alt="IDORA NFC Card"
+                className="w-full h-full object-contain preserve-3d rounded-2xl"
+              />
             </motion.div>
           </motion.div>
 

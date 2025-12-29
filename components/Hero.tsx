@@ -75,28 +75,17 @@ export default function Hero() {
 
           {/* Right Side - Card & Stage Image */}
           <div className="flex flex-col items-center gap-8 lg:gap-8">
-            {/* Rotating Glass Card */}
+            {/* Rotating IDORA Card */}
             <div className="relative w-80 h-48 perspective-1000">
               <div className="absolute inset-0 animate-rotate-slow preserve-3d">
-                {/* Glass Card */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between">
-                  {/* Card Content */}
-                  <div className="flex justify-between items-start">
-                    <div className="text-left">
-                      <h3 className="text-white font-bold text-xl">IDORA</h3>
-                      <p className="text-gray-300 text-sm">Smart NFC</p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur"></div>
-                    <div className="text-left">
-                      <p className="text-white font-semibold text-base">Your Name</p>
-                      <p className="text-gray-400 text-sm">tap to connect</p>
-                    </div>
-                  </div>
-                </div>
+                <Image
+                  src="/images/idora-card.png"
+                  alt="IDORA NFC Card"
+                  width={320}
+                  height={192}
+                  className="w-full h-full object-contain rounded-2xl"
+                  priority
+                />
               </div>
             </div>
 

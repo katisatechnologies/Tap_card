@@ -79,7 +79,7 @@ export default function FAQ() {
         <div className="text-center mt-12">
           <p className="text-gray-300 mb-4">Still have questions?</p>
           <a 
-            href="https://wa.me/94771234567?text=Hi! I have a question about IDORA"
+            href="https://wa.me/94701200064?text=Hi!%20I%20have%20a%20question%20about%20IDORA.%20I%20was%20reading%20your%20FAQ%20and%20need%20more%20information."
             target="_blank"
             className="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition"
           >

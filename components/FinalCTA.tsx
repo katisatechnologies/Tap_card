@@ -17,7 +17,7 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
-            href="https://wa.me/94771234567?text=Hi! I want to order IDORA NFC cards"
+            href="https://wa.me/94701200064?text=Hi!%20I%27m%20ready%20to%20order%20IDORA%20NFC%20cards!%20I%27d%20like%20to%20discuss%20the%20details%20and%20place%20my%20order."
             target="_blank"
             className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/70 w-full sm:w-auto inline-flex items-center justify-center hover:scale-105 transform duration-300"
           >

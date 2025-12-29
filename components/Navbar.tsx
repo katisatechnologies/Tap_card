@@ -1,26 +1,79 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+const navItems = [
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Use Cases', href: '#use-cases' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'FAQ', href: '#faq' },
+]
+
+const sections = [{ label: 'Hero', href: '#hero' }, ...navItems]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [active, setActive] = useState('#hero')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      sections.forEach(section => {
+        const el = document.querySelector(section.href)
+        if (!el) return
+
+        const rect = el.getBoundingClientRect()
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActive(section.href)
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const linkClass = (href: string) =>
+    `transition font-medium ${
+      active === href
+        ? 'text-primary border-b-2 border-primary'
+        : 'text-gray-300 hover:text-primary'
+    }`
 
   return (
     <nav className="fixed top-0 w-full bg-[#0B0F1A]/95 backdrop-blur-sm z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-white">IDORA</span>
-          </div>
+
+          {/* Logo */}
+          <a
+            href="#hero"
+            onClick={() => {
+              setActive('#hero')
+              setIsOpen(false)
+            }}
+            className={`text-2xl font-bold transition ${
+              active === '#hero' ? 'text-white' : 'text-white'
+            }`}
+          >
+            IDORA
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-gray-300 hover:text-primary transition">How It Works</a>
-            <a href="#use-cases" className="text-gray-700 hover:text-primary transition">Use Cases</a>
-            <a href="#pricing" className="text-gray-700 hover:text-primary transition">Pricing</a>
-            <a href="#faq" className="text-gray-700 hover:text-primary transition">FAQ</a>
-            <a 
-              href="https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20IDORA%20NFC%20cards.%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20learn%20more." 
+            {navItems.map(item => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={linkClass(item.href)}
+              >
+                {item.label}
+              </a>
+            ))}
+
+            <a
+              href="https://wa.me/94701200064"
               target="_blank"
               className="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
             >
@@ -28,32 +81,40 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <button 
+          {/* Mobile Toggle */}
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700"
+            className="md:hidden text-white text-2xl"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {isOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
-          <div className="px-4 pt-2 pb-4 space-y-3">
-            <a href="#how-it-works" className="block py-2 text-gray-700">How It Works</a>
-            <a href="#use-cases" className="block py-2 text-gray-700">Use Cases</a>
-            <a href="#pricing" className="block py-2 text-gray-700">Pricing</a>
-            <a href="#faq" className="block py-2 text-gray-700">FAQ</a>
-            <a 
-              href="https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20IDORA%20NFC%20cards.%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20learn%20more." 
+        <div className="md:hidden bg-[#0B0F1A] border-t border-white/10">
+          <div className="px-4 pt-3 pb-4 space-y-3">
+            {navItems.map(item => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => {
+                  setActive(item.href)
+                  setIsOpen(false)
+                }}
+                className={`block py-2 transition ${
+                  active === item.href
+                    ? 'text-primary font-semibold'
+                    : 'text-gray-300 hover:text-primary'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+
+            <a
+              href="https://wa.me/94701200064"
               target="_blank"
               className="block bg-primary text-white px-6 py-2 rounded-full text-center"
             >

@@ -78,20 +78,24 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2 flex flex-col"
+              className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-visible transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2 flex flex-col"
             >
+              {/* Badge on Card Frame */}
+              {plan.badge && (
+                <div className="absolute -top-3 -right-3 z-20">
+                  <div className={`${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' 
+                      : 'bg-gradient-to-r from-green-500 to-emerald-600'
+                  } text-white text-xs font-bold px-4 py-2 rounded-full shadow-xl`}>
+                    {plan.badge}
+                  </div>
+                </div>
+              )}
+
               <div className="p-6 flex flex-col flex-1">
-                {/* Header with Badge */}
-                <div className="text-center mb-4 min-h-[60px]">
-                  {plan.badge && (
-                    <div className={`inline-block mb-2 ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' 
-                        : 'bg-gradient-to-r from-green-500 to-emerald-600'
-                    } text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg`}>
-                      {plan.badge}
-                    </div>
-                  )}
+                {/* Header */}
+                <div className="text-center mb-4">
                   <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
                   <p className="text-sm text-gray-400">{plan.subtitle}</p>
                 </div>

@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Ensure html and body take full width/height and hide horizontal overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* removes horizontal scroll */
+  scroll-behavior: smooth;
+}
+
+/* Body font settings */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,12 +28,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Optional: Tailwind custom utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/*images responsive to avoid overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

@@ -39,9 +39,9 @@ export default function ProductPreview() {
   ]
 
   const socialIcons = [
-    { IconComponent: Facebook, bg: 'bg-blue-100', text: 'text-blue-600', delay: 0.5 },
-    { IconComponent: Linkedin, bg: 'bg-pink-100', text: 'text-pink-600', delay: 0.6 },
-    { IconComponent: Instagram, bg: 'bg-purple-100', text: 'text-purple-600', delay: 0.7 },
+    { IconComponent: Facebook, bg: 'bg-blue-100', text: 'text-blue-600', delay: 0.5, href: '#' },
+    { IconComponent: Linkedin, bg: 'bg-pink-100', text: 'text-pink-600', delay: 0.6, href: '#' },
+    { IconComponent: Instagram, bg: 'bg-purple-100', text: 'text-purple-600', delay: 0.7, href: 'https://www.instagram.com/idora_app/' },
   ]
 
   return (

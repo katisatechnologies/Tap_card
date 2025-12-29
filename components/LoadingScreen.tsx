@@ -56,7 +56,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-2xl p-6 flex flex-col justify-between preserve-3d">
                 <div className="flex justify-between items-start">
                   <div className="text-left">
-                    <h3 className="text-white font-bold text-lg">TapCard</h3>
+                    <h3 className="text-white font-bold text-lg">IDORA</h3>
                     <p className="text-gray-300 text-xs">Smart NFC</p>
                   </div>
                   <motion.div 
@@ -84,7 +84,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            TapCard
+            IDORA
           </motion.h1>
 
           {/* Tagline */}

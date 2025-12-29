@@ -66,7 +66,7 @@ export default function Pricing() {
           <div className="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
             🚀 Coming Soon - Pre-Order Now!
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Choose Your TapShare Card</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Choose Your IDORA Card</h2>
           <p className="text-xl text-gray-300">Reserve your card now. Special launch pricing for early birds!</p>
         </div>
 
@@ -99,7 +99,7 @@ export default function Pricing() {
                       <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-4 flex flex-col justify-between transform hover:scale-105 transition-transform">
                         <div className="flex justify-between items-start">
                           <div>
-                            <p className="text-white font-bold text-sm">TapShare</p>
+                            <p className="text-white font-bold text-sm">IDORA</p>
                             <p className="text-gray-400 text-xs">NFC Card</p>
                           </div>
                           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>
@@ -139,7 +139,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <a 
-                  href="https://wa.me/94771234567?text=Hi! I want to pre-order TapShare cards"
+                  href="https://wa.me/94771234567?text=Hi! I want to pre-order IDORA cards"
                   target="_blank"
                   className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30 mt-auto"
                 >

@@ -12,12 +12,12 @@ export default function FinalCTA() {
           Start Sharing Your Contact the <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Smart Way</span>
         </h2>
         <p className="text-xl sm:text-2xl text-gray-300 mb-10 text-balance">
-          Join hundreds of businesses and professionals using TapShare
+          Join hundreds of businesses and professionals using IDORA
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
-            href="https://wa.me/94771234567?text=Hi! I want to order TapShare NFC cards"
+            href="https://wa.me/94771234567?text=Hi! I want to order IDORA NFC cards"
             target="_blank"
             className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/70 w-full sm:w-auto inline-flex items-center justify-center hover:scale-105 transform duration-300"
           >

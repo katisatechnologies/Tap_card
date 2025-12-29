@@ -75,7 +75,7 @@ export default function ProductPreview() {
                       {/* Card Content */}
                       <div className="flex justify-between items-start">
                         <div className="text-left">
-                          <h3 className="text-white font-bold text-xl">TapCard</h3>
+                          <h3 className="text-white font-bold text-xl">IDORA</h3>
                           <p className="text-gray-300 text-sm">Smart NFC</p>
                         </div>
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>

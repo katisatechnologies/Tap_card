@@ -61,7 +61,7 @@ export default function Hero() {
                 href="#pricing"
                 className="bg-gradient-to-r from-[#00193e] to-[#008cffdb] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition text-center"
               >
-                Get Your TapCard
+                Get Your IDORA Card
               </a>
 
               <a
@@ -83,7 +83,7 @@ export default function Hero() {
                   {/* Card Content */}
                   <div className="flex justify-between items-start">
                     <div className="text-left">
-                      <h3 className="text-white font-bold text-xl">TapCard</h3>
+                      <h3 className="text-white font-bold text-xl">IDORA</h3>
                       <p className="text-gray-300 text-sm">Smart NFC</p>
                     </div>
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500"></div>

@@ -20,7 +20,7 @@ export default function UseCases() {
     },
     {
       title: "Cafes & Restaurants",
-      description: "Place your TapShare card on tables. Customers tap to save your contact, follow on social media, or leave a review.",
+      description: "Place your IDORA card on tables. Customers tap to save your contact, follow on social media, or leave a review.",
       icon: "☕",
       color: "from-orange-400 to-red-500"
     },
@@ -42,7 +42,7 @@ export default function UseCases() {
     <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Who Uses TapShare?</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Who Uses IDORA?</h2>
           <p className="text-xl text-gray-300">Smart professionals across Sri Lanka</p>
         </div>
 

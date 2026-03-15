@@ -51,7 +51,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-300 mb-12">
-              A smart NFC Tap Card to instantly share your profile, socials, and contact details —
+              IDORA is now live — instantly share your profile, socials, and contact details with a smart NFC Tap Card —
               no apps, no typing.
             </p>
 

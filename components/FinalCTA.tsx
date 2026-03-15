@@ -9,10 +9,10 @@ export default function FinalCTA() {
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance leading-tight">
-          Start Sharing Your Contact the <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Smart Way</span>
+          IDORA is Live — Share Your Contact the <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Smart Way</span>
         </h2>
         <p className="text-xl sm:text-2xl text-gray-300 mb-10 text-balance">
-          Join hundreds of businesses and professionals using IDORA
+          Join businesses and professionals already using IDORA
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

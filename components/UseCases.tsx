@@ -50,17 +50,24 @@ export default function UseCases() {
           {cases.map((useCase, index) => (
             <div key={index} className="group h-full">
               <div
-                className="relative h-full flex flex-col rounded-2xl p-6 transition-all duration-300 bg-gradient-to-br from-indigo-900/50 via-gray-800/50 to-blue-900/50 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 ring-2 ring-indigo-400/30 backdrop-blur-sm"
+                className={`relative h-full flex flex-col rounded-2xl p-6 transition-all duration-300
+                  ${index === 0
+                    ? 'bg-gradient-to-br from-indigo-900/50 via-gray-800/50 to-blue-900/50 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 ring-2 ring-indigo-400/30 backdrop-blur-sm'
+                    : 'bg-gray-800/40 border-2 border-gray-700 opacity-60 cursor-not-allowed backdrop-blur-sm hover:border-gray-600'
+                  }`}
               >
-                <>
-                  <div className="absolute -top-3 -right-3 flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                    <span className="uppercase tracking-wider">✅ Active</span>
-                  </div>
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-500/5 to-transparent rounded-2xl pointer-events-none"></div>
-                </>
+                {index === 0 && (
+                  <>
+                    <div className="absolute -top-3 -right-3 flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
+                      <span className="uppercase tracking-wider">🔥 Ongoing</span>
+                    </div>
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-500/5 to-transparent rounded-2xl pointer-events-none"></div>
+                  </>
+                )}
 
                 <div
-                  className={`relative w-16 h-16 bg-gradient-to-br ${useCase.color} rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-125 group-hover:rotate-6 shadow-lg`}
+                  className={`relative w-16 h-16 bg-gradient-to-br ${useCase.color} rounded-xl flex items-center justify-center mb-4 transition-all duration-300
+                    ${index === 0 ? 'group-hover:scale-125 group-hover:rotate-6 shadow-lg' : ''}`}
                 >
                   <img
                     src={useCase.icon}
@@ -69,11 +76,11 @@ export default function UseCases() {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-white">
+                <h3 className={`text-xl font-bold mb-3 ${index === 0 ? 'text-white' : 'text-gray-300'}`}>
                   {useCase.title}
                 </h3>
 
-                <p className="leading-relaxed mt-auto text-gray-300">
+                <p className={`leading-relaxed mt-auto ${index === 0 ? 'text-gray-300' : 'text-gray-400'}`}>
                   {useCase.description}
                 </p>
               </div>

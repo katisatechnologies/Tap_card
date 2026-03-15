@@ -1,65 +1,65 @@
 export default function Pricing() {
   const plans = [
     {
-      name: "Basic",
-      subtitle: "Core IDORA Platform",
-      price: "LKR 4,700",
-      originalPrice: "LKR 5,875",
-      discount: "20% OFF",
+      name: "Single Card",
+      subtitle: "Smart Business Card",
       features: [
-        "Tap-to-share digital profile via NFC",
-        "Personalized profile pages (/u/username)",
-        "Secure card activation with inventory control",
-        "Admin panel to manage users and card status",
-        "vCard download for one-tap contact saving"
+        "1 NFC Card",
+        "Custom design",
+        "Digital profile page",
+        "Unlimited updates",
+        "WhatsApp support"
       ],
-      cta: "Get Basic",
+      cta: "Pre-Order Now",
       popular: false,
       badge: null,
-      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Basic%20package%20for%20IDORA.%20Please%20share%20the%20next%20steps."
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Single%20Card%20from%20IDORA.%20I%27m%20interested%20in%201%20NFC%20card%20with%20custom%20design.%20Please%20share%20more%20details!"
     },
     {
-      name: "Gold",
-      subtitle: "Basic + Lead Capture",
-      price: "LKR 5,500",
-      originalPrice: "LKR 6,875",
-      discount: "20% OFF",
+      name: "Business Pack",
+      subtitle: "Smart Business Card",
       features: [
-        "Tap-to-share digital profile via NFC",
-        "Personalized profile pages (/u/username)",
-        "Secure card activation with inventory control",
-        "Admin panel to manage users and card status",
-        "vCard download for one-tap contact saving",
-        "New lead capture flow from public profile visits"
+        "10 NFC Cards",
+        "Custom branding",
+        "Individual profiles",
+        "Unlimited updates",
+        "Priority support",
+        "Free delivery"
       ],
-      cta: "Get Gold",
+      cta: "Pre-Order Now",
       popular: true,
       badge: "MOST POPULAR",
-      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Gold%20package%20for%20IDORA,%20including%20lead%20capture.%20Please%20share%20the%20next%20steps."
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Business%20Pack%20from%20IDORA.%20I%27m%20interested%20in%2010%20NFC%20cards%20with%20custom%20branding%20for%20my%20team.%20Please%20share%20pricing%20and%20details!"
     },
     {
-      name: "Silver",
-      subtitle: "Pending",
-      price: "Coming Soon",
+      name: "Company Card",
+      subtitle: "Smart Business Card",
       features: [
-        "Package details coming soon"
+        "5 NFC Cards",
+        "Company branding",
+        "Individual profiles",
+        "Unlimited updates",
+        "Priority support"
       ],
-      cta: "Pending",
+      cta: "Pre-Order Now",
       popular: false,
       badge: null,
-      whatsappLink: "#"
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20the%20Company%20Card%20pack%20from%20IDORA.%20I%27m%20interested%20in%205%20NFC%20cards%20with%20company%20branding.%20Please%20provide%20more%20information!"
     },
     {
-      name: "Platinum",
-      subtitle: "Pending",
-      price: "Coming Soon",
+      name: "Custom Card",
+      subtitle: "Smart Business Card",
       features: [
-        "Package details coming soon"
+        "Fully customizable design",
+        "Premium materials",
+        "Digital profile page",
+        "Choose any profile type",
+        "Priority support"
       ],
-      cta: "Pending",
+      cta: "Pre-Order Now",
       popular: false,
-      badge: null,
-      whatsappLink: "#"
+      badge: "BEST VALUE",
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20pre-order%20a%20Custom%20Card%20from%20IDORA.%20I%27m%20interested%20in%20a%20fully%20customizable%20design%20with%20premium%20materials.%20Let%27s%20discuss%20my%20requirements!"
     }
   ]
 
@@ -68,10 +68,10 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
-            ✅ IDORA is Live
+            🚀 Coming Soon - Pre-Order Now!
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Choose Your IDORA Package</h2>
-          <p className="text-xl text-gray-300">Basic and Gold are available now. Additional packages are coming soon.</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Choose Your IDORA Card</h2>
+          <p className="text-xl text-gray-300">Reserve your card now. Special launch pricing for early birds!</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -116,15 +116,9 @@ export default function Pricing() {
                 {/* Pre-Order Notice */}
                 <div className="mb-6 text-center">
                   <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl py-3 px-4">
-                    <p className="text-indigo-400 font-semibold text-sm">Status</p>
-                    <p className="text-white text-lg font-bold">{plan.price}</p>
-                    {plan.discount && (
-                      <p className="text-green-400 text-xs font-semibold mt-1">{plan.discount}</p>
-                    )}
-                    {plan.originalPrice && (
-                      <p className="text-gray-400 text-xs line-through mt-1">{plan.originalPrice}</p>
-                    )}
-                    <p className="text-gray-400 text-xs mt-1">{plan.subtitle === 'Pending' ? 'More details will be announced' : 'Available now'}</p>
+                    <p className="text-indigo-400 font-semibold text-sm">Launch Price</p>
+                    <p className="text-white text-lg font-bold">Coming Soon</p>
+                    <p className="text-gray-400 text-xs mt-1">Early bird discount available</p>
                   </div>
                 </div>
 
@@ -144,11 +138,7 @@ export default function Pricing() {
                 <a 
                   href={plan.whatsappLink}
                   target="_blank"
-                  className={`block w-full py-3 rounded-xl font-bold text-center transition mt-auto ${
-                    plan.subtitle === 'Pending'
-                      ? 'bg-gray-700 text-gray-300 cursor-not-allowed pointer-events-none'
-                      : 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white hover:from-indigo-700 hover:to-blue-700 shadow-lg shadow-indigo-500/30'
-                  }`}
+                  className="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-bold text-center hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-500/30 mt-auto"
                 >
                   {plan.cta}
                 </a>
@@ -158,11 +148,11 @@ export default function Pricing() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-4">What you get with active packages:</p>
+          <p className="text-gray-300 mb-4">All plans will include:</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
-            <span>✓ NFC-powered smart sharing</span>
-            <span>✓ Admin-managed card lifecycle</span>
-            <span>✓ Instant contact save with vCard</span>
+            <span>✓ Free shipping in Colombo</span>
+            <span>✓ Lifetime card validity</span>
+            <span>✓ No monthly fees</span>
           </div>
         </div>
       </div>

@@ -1,18 +1,33 @@
 export default function Pricing() {
+  // Feature matrix as per screenshot
+  const featureMatrix = [
+    { key: 'core', label: 'Core profile sharing' },
+    { key: 'nfc', label: 'Tap-to-share NFC card' },
+    { key: 'dashboard', label: 'Profile editing/dashboard' },
+    { key: 'lead', label: 'Lead capture' },
+    { key: 'custom', label: 'Advanced customization' },
+    { key: 'pipeline', label: 'Lead status pipeline' },
+    { key: 'export', label: 'Lead export (CSV)' },
+    { key: 'exec', label: 'Executive personalization' },
+  ];
+
   const plans = [
     {
       name: "Basic",
-      subtitle: "Core IDORA Platform",
+      subtitle: "For individuals & solopreneurs",
       price: "LKR 4,700",
       originalPrice: "LKR 5,875",
       discount: "20% OFF",
-      features: [
-        "Tap-to-share digital profile via NFC",
-        "Personalized profile pages (/u/username)",
-        "Secure card activation with inventory control",
-        "Admin panel to manage users and card status",
-        "vCard download for one-tap contact saving"
-      ],
+      features: {
+        core: true,
+        nfc: true,
+        dashboard: true,
+        lead: false,
+        custom: false,
+        pipeline: false,
+        export: false,
+        exec: false,
+      },
       cta: "Get Basic",
       popular: false,
       badge: null,
@@ -20,18 +35,20 @@ export default function Pricing() {
     },
     {
       name: "Gold",
-      subtitle: "Basic + Lead Capture",
+      subtitle: "For teams & lead capture",
       price: "LKR 5,500",
       originalPrice: "LKR 6,875",
       discount: "20% OFF",
-      features: [
-        "Tap-to-share digital profile via NFC",
-        "Personalized profile pages (/u/username)",
-        "Secure card activation with inventory control",
-        "Admin panel to manage users and card status",
-        "vCard download for one-tap contact saving",
-        "New lead capture flow from public profile visits"
-      ],
+      features: {
+        core: true,
+        nfc: true,
+        dashboard: true,
+        lead: true,
+        custom: true,
+        pipeline: false,
+        export: false,
+        exec: false,
+      },
       cta: "Get Gold",
       popular: true,
       badge: "MOST POPULAR",
@@ -39,29 +56,43 @@ export default function Pricing() {
     },
     {
       name: "Silver",
-      subtitle: "Pending",
-      price: "Coming Soon",
-      features: [
-        "Package details coming soon"
-      ],
-      cta: "Pending",
+      subtitle: "For growing businesses",
+      price: "Contact Us",
+      features: {
+        core: true,
+        nfc: true,
+        dashboard: true,
+        lead: true,
+        custom: true,
+        pipeline: true,
+        export: true,
+        exec: false,
+      },
+      cta: "Contact Sales",
       popular: false,
       badge: null,
-      whatsappLink: "#"
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20the%20Silver%20IDORA%20package.%20Please%20share%20details."
     },
     {
       name: "Platinum",
-      subtitle: "Pending",
-      price: "Coming Soon",
-      features: [
-        "Package details coming soon"
-      ],
-      cta: "Pending",
+      subtitle: "For enterprises & execs",
+      price: "Contact Us",
+      features: {
+        core: true,
+        nfc: true,
+        dashboard: true,
+        lead: true,
+        custom: true,
+        pipeline: true,
+        export: true,
+        exec: true,
+      },
+      cta: "Contact Sales",
       popular: false,
       badge: null,
-      whatsappLink: "#"
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27m%20interested%20in%20the%20Platinum%20IDORA%20package.%20Please%20share%20details."
     }
-  ]
+  ];
 
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0B0F1A]">
@@ -128,14 +159,18 @@ export default function Pricing() {
                   </div>
                 </div>
 
-                {/* Features */}
+                {/* Features Table */}
                 <ul className="space-y-2 mb-6 flex-1">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm">
-                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-gray-300">{feature}</span>
+                  {featureMatrix.map((f) => (
+                    <li key={f.key} className="flex items-start text-sm">
+                      {plan.features[f.key] ? (
+                        <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      ) : (
+                        <svg className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                      )}
+                      <span className={plan.features[f.key] ? "text-gray-300" : "text-gray-500 line-through"}>{f.label}</span>
                     </li>
                   ))}
                 </ul>

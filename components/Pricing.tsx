@@ -1,64 +1,5 @@
 export default function Pricing() {
-<<<<<<< HEAD
   const plans = [
-=======
-type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
-
-const featureMatrix: { key: FeatureKey; label: string }[] = [
-  { key: 'core', label: 'Core profile sharing' },
-  { key: 'nfc', label: 'Tap-to-share NFC card' },
-  { key: 'dashboard', label: 'Profile editing/dashboard' },
-  { key: 'lead', label: 'Lead capture' },
-  { key: 'custom', label: 'Advanced customization' },
-  { key: 'pipeline', label: 'Lead status pipeline' },
-  { key: 'export', label: 'Lead export (CSV)' },
-  { key: 'exec', label: 'Executive personalization' },
-];
-  type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
-
-  const featureMatrix: { key: FeatureKey; label: string }[] = [
-    { key: 'core', label: 'Core profile sharing' },
-    { key: 'nfc', label: 'Tap-to-share NFC card' },
-    { key: 'dashboard', label: 'Profile editing/dashboard' },
-    { key: 'lead', label: 'Lead capture' },
-    { key: 'custom', label: 'Advanced customization' },
-    { key: 'pipeline', label: 'Lead status pipeline' },
-    { key: 'export', label: 'Lead export (CSV)' },
-    { key: 'exec', label: 'Executive personalization' },
-  ];
-
-  type PlanFeatures = Record<FeatureKey, boolean>;
-
-  const plans: Array<{
-    name: string;
-    subtitle: string;
-    price: string;
-    originalPrice?: string;
-    discount?: string;
-    features: PlanFeatures;
-    cta: string;
-    popular: boolean;
-    badge: string | null;
-    whatsappLink: string;
-  }> = [
-type PlanFeatures = Record<FeatureKey, boolean>;
-
-const plans: Array<{
-  name: string;
-  subtitle: string;
-  price: string;
-        features: {
-          core: true,
-          nfc: true,
-          dashboard: false,
-          lead: false,
-          custom: false,
-          pipeline: false,
-          export: false,
-          exec: false,
-        },
-}> = [
->>>>>>> 88c7ad8 (Fix: Pricing component type safety and deploy issues. Now matches feature matrix and builds successfully.)
     {
       name: "Basic",
       subtitle: "Core IDORA Platform",
@@ -68,16 +9,14 @@ const plans: Array<{
       features: [
         "Tap-to-share digital profile via NFC",
         "Personalized profile pages (/u/username)",
-        features: {
-          core: true,
-          nfc: true,
-          dashboard: false,
-          lead: true,
-          custom: false,
-          pipeline: false,
-          export: false,
-          exec: false,
-        },
+        "Secure card activation with inventory control",
+        "Admin panel to manage users and card status",
+        "vCard download for one-tap contact saving"
+      ],
+      cta: "Get Basic",
+      popular: false,
+      badge: null,
+      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Basic%20package%20for%20IDORA.%20Please%20share%20the%20next%20steps."
     },
     {
       name: "Gold",
@@ -137,16 +76,16 @@ const plans: Array<{
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="relative bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl overflow-visible transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 hover:border-gray-700 hover:-translate-y-2 flex flex-col"
             >
               {/* Badge on Card Frame */}
               {plan.badge && (
                 <div className="absolute -top-3 -right-3 z-20">
                   <div className={`${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' 
+                    plan.popular
+                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-600'
                       : 'bg-gradient-to-r from-green-500 to-emerald-600'
                   } text-white text-xs font-bold px-4 py-2 rounded-full shadow-xl`}>
                     {plan.badge}
@@ -202,7 +141,7 @@ const plans: Array<{
                 </ul>
 
                 {/* CTA Button */}
-                <a 
+                <a
                   href={plan.whatsappLink}
                   target="_blank"
                   className={`block w-full py-3 rounded-xl font-bold text-center transition mt-auto ${
@@ -232,7 +171,7 @@ const plans: Array<{
         .perspective-500 {
           perspective: 500px;
         }
-        
+
         @keyframes float {
           0%, 100% {
             transform: translateY(0px) rotateY(-15deg);
@@ -241,7 +180,7 @@ const plans: Array<{
             transform: translateY(-10px) rotateY(-15deg);
           }
         }
-        
+
         .animate-float {
           animation: float 3s ease-in-out infinite;
         }

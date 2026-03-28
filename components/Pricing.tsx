@@ -1,5 +1,64 @@
 export default function Pricing() {
+<<<<<<< HEAD
   const plans = [
+=======
+type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
+
+const featureMatrix: { key: FeatureKey; label: string }[] = [
+  { key: 'core', label: 'Core profile sharing' },
+  { key: 'nfc', label: 'Tap-to-share NFC card' },
+  { key: 'dashboard', label: 'Profile editing/dashboard' },
+  { key: 'lead', label: 'Lead capture' },
+  { key: 'custom', label: 'Advanced customization' },
+  { key: 'pipeline', label: 'Lead status pipeline' },
+  { key: 'export', label: 'Lead export (CSV)' },
+  { key: 'exec', label: 'Executive personalization' },
+];
+  type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
+
+  const featureMatrix: { key: FeatureKey; label: string }[] = [
+    { key: 'core', label: 'Core profile sharing' },
+    { key: 'nfc', label: 'Tap-to-share NFC card' },
+    { key: 'dashboard', label: 'Profile editing/dashboard' },
+    { key: 'lead', label: 'Lead capture' },
+    { key: 'custom', label: 'Advanced customization' },
+    { key: 'pipeline', label: 'Lead status pipeline' },
+    { key: 'export', label: 'Lead export (CSV)' },
+    { key: 'exec', label: 'Executive personalization' },
+  ];
+
+  type PlanFeatures = Record<FeatureKey, boolean>;
+
+  const plans: Array<{
+    name: string;
+    subtitle: string;
+    price: string;
+    originalPrice?: string;
+    discount?: string;
+    features: PlanFeatures;
+    cta: string;
+    popular: boolean;
+    badge: string | null;
+    whatsappLink: string;
+  }> = [
+type PlanFeatures = Record<FeatureKey, boolean>;
+
+const plans: Array<{
+  name: string;
+  subtitle: string;
+  price: string;
+        features: {
+          core: true,
+          nfc: true,
+          dashboard: false,
+          lead: false,
+          custom: false,
+          pipeline: false,
+          export: false,
+          exec: false,
+        },
+}> = [
+>>>>>>> 88c7ad8 (Fix: Pricing component type safety and deploy issues. Now matches feature matrix and builds successfully.)
     {
       name: "Basic",
       subtitle: "Core IDORA Platform",
@@ -9,14 +68,16 @@ export default function Pricing() {
       features: [
         "Tap-to-share digital profile via NFC",
         "Personalized profile pages (/u/username)",
-        "Secure card activation with inventory control",
-        "Admin panel to manage users and card status",
-        "vCard download for one-tap contact saving"
-      ],
-      cta: "Get Basic",
-      popular: false,
-      badge: null,
-      whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Basic%20package%20for%20IDORA.%20Please%20share%20the%20next%20steps."
+        features: {
+          core: true,
+          nfc: true,
+          dashboard: false,
+          lead: true,
+          custom: false,
+          pipeline: false,
+          export: false,
+          exec: false,
+        },
     },
     {
       name: "Gold",

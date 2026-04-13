@@ -1,7 +1,3 @@
-export default function Pricing() {
-<<<<<<< HEAD
-  const plans = [
-=======
 type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
 
 const featureMatrix: { key: FeatureKey; label: string }[] = [
@@ -14,51 +10,104 @@ const featureMatrix: { key: FeatureKey; label: string }[] = [
   { key: 'export', label: 'Lead export (CSV)' },
   { key: 'exec', label: 'Executive personalization' },
 ];
-  type FeatureKey = 'core' | 'nfc' | 'dashboard' | 'lead' | 'custom' | 'pipeline' | 'export' | 'exec';
 
-  const featureMatrix: { key: FeatureKey; label: string }[] = [
-    { key: 'core', label: 'Core profile sharing' },
-    { key: 'nfc', label: 'Tap-to-share NFC card' },
-    { key: 'dashboard', label: 'Profile editing/dashboard' },
-    { key: 'lead', label: 'Lead capture' },
-    { key: 'custom', label: 'Advanced customization' },
-    { key: 'pipeline', label: 'Lead status pipeline' },
-    { key: 'export', label: 'Lead export (CSV)' },
-    { key: 'exec', label: 'Executive personalization' },
-  ];
-
-  type PlanFeatures = Record<FeatureKey, boolean>;
-
-  const plans: Array<{
-    name: string;
-    subtitle: string;
-    price: string;
-    originalPrice?: string;
-    discount?: string;
-    features: PlanFeatures;
-    cta: string;
-    popular: boolean;
-    badge: string | null;
-    whatsappLink: string;
-  }> = [
 type PlanFeatures = Record<FeatureKey, boolean>;
 
 const plans: Array<{
   name: string;
   subtitle: string;
   price: string;
-        features: {
-          core: true,
-          nfc: true,
-          dashboard: false,
-          lead: false,
-          custom: false,
-          pipeline: false,
-          export: false,
-          exec: false,
-        },
+  originalPrice?: string;
+  discount?: string;
+  features: PlanFeatures;
+  cta: string;
+  popular: boolean;
+  badge: string | null;
+  whatsappLink: string;
 }> = [
->>>>>>> 88c7ad8 (Fix: Pricing component type safety and deploy issues. Now matches feature matrix and builds successfully.)
+  {
+    name: "Basic",
+    subtitle: "Core IDORA Platform",
+    price: "LKR 4,700",
+    originalPrice: "LKR 5,875",
+    discount: "20% OFF",
+    features: {
+      core: true,
+      nfc: true,
+      dashboard: false,
+      lead: false,
+      custom: false,
+      pipeline: false,
+      export: false,
+      exec: false,
+    },
+    cta: "Get Basic",
+    popular: false,
+    badge: null,
+    whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Basic%20package%20for%20IDORA.%20Please%20share%20the%20next%20steps."
+  },
+  {
+    name: "Gold",
+    subtitle: "Basic + Lead Capture",
+    price: "LKR 5,500",
+    originalPrice: "LKR 6,875",
+    discount: "20% OFF",
+    features: {
+      core: true,
+      nfc: true,
+      dashboard: false,
+      lead: true,
+      custom: false,
+      pipeline: false,
+      export: false,
+      exec: false,
+    },
+    cta: "Get Gold",
+    popular: true,
+    badge: "MOST POPULAR",
+    whatsappLink: "https://wa.me/94701200064?text=Hi!%20I%27d%20like%20to%20get%20the%20Gold%20package%20for%20IDORA,%20including%20lead%20capture.%20Please%20share%20the%20next%20steps."
+  },
+  {
+    name: "Silver",
+    subtitle: "Pending",
+    price: "Coming Soon",
+    features: {
+      core: false,
+      nfc: false,
+      dashboard: false,
+      lead: false,
+      custom: false,
+      pipeline: false,
+      export: false,
+      exec: false,
+    },
+    cta: "Pending",
+    popular: false,
+    badge: null,
+    whatsappLink: "#"
+  },
+  {
+    name: "Platinum",
+    subtitle: "Pending",
+    price: "Coming Soon",
+    features: {
+      core: false,
+      nfc: false,
+      dashboard: false,
+      lead: false,
+      custom: false,
+      pipeline: false,
+      export: false,
+      exec: false,
+    },
+    cta: "Pending",
+    popular: false,
+    badge: null,
+    whatsappLink: "#"
+  }
+];
+
+export default function Pricing() {
     {
       name: "Basic",
       subtitle: "Core IDORA Platform",
@@ -68,7 +117,7 @@ const plans: Array<{
       features: [
         "Tap-to-share digital profile via NFC",
         "Personalized profile pages (/u/username)",
-        features: {
+  export default function Pricing() {
           core: true,
           nfc: true,
           dashboard: false,
@@ -191,13 +240,15 @@ const plans: Array<{
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6 flex-1">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm">
-                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                  {featureMatrix.map((feature, idx) => (
+                    plan.features[feature.key] && (
+                      <li key={feature.key} className="flex items-start text-sm">
+                        <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-gray-300">{feature.label}</span>
+                      </li>
+                    )
                   ))}
                 </ul>
 

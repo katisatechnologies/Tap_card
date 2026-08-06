@@ -7,36 +7,36 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Does it work on iPhone?",
-      answer: "Yes! IDORA works on all iPhones (iPhone 7 and newer) and all Android phones with NFC. No app download needed."
+      question: "What is NFC and why is this better than paper cards?",
+      answer: "NFC lets phones open your IDORA profile with a simple tap. Unlike paper cards, your details stay updated, your links are interactive, and every interaction can become a lead."
     },
     {
-      question: "Do customers need to download an app?",
-      answer: "No. When someone taps your card, a webpage opens instantly in their browser. They can save your contact directly from there."
+      question: "Which phones support tapping?",
+      answer: "Most modern iPhones and Android phones support NFC tapping. In practice, nearly all current business users can tap and open your profile instantly."
     },
     {
-      question: "Can I update my details later?",
-      answer: "Yes. You can update your contact info, social media links, and profile anytime from your dashboard. Changes reflect immediately."
+      question: "What if NFC is disabled on the phone?",
+      answer: "If NFC is turned off or unsupported, customers can still scan the QR fallback and open the same profile. You never lose the sharing moment."
     },
     {
-      question: "What if I lose my card?",
-      answer: "You can deactivate the lost card from your account and order a replacement. Your profile and data remain safe."
+      question: "Do people need an app to use IDORA?",
+      answer: "No app is required for visitors. They tap, your page opens in the browser, and they can call, message, or save contact immediately."
     },
     {
-      question: "How long does delivery take?",
-      answer: "Delivery within Colombo takes 2-3 days. Other cities in Sri Lanka take 3-5 days. We use reliable courier services."
+      question: "Can I update my profile after buying?",
+      answer: "Yes. You can edit contact details, links, visuals, and CTAs from your dashboard. Your public profile updates in real time."
     },
     {
-      question: "Can I customize the card design?",
-      answer: "Yes! You can add your logo, choose colors, and customize the design. We'll send you a preview before printing."
+      question: "How does IDORA help with lead follow-up?",
+      answer: "Visitors can submit lead details directly from your profile. In the dashboard you can manage statuses, priorities, timeline notes, and AI-assisted follow-up suggestions."
     },
     {
-      question: "Is there a monthly fee?",
-      answer: "No subscriptions. You pay once for the card and profile setup. That's it. Update your details forever at no extra cost."
+      question: "Can teams and agencies use IDORA at scale?",
+      answer: "Yes. IDORA supports consistent team profiles, conversion-focused links, premium presentation options, and exportable lead data for operations."
     },
     {
-      question: "What if NFC doesn't work?",
-      answer: "Every IDORA card also includes a QR code backup. If NFC fails, people can scan the QR code instead."
+      question: "Is IDORA only for contact sharing?",
+      answer: "No. Contact sharing is the entry point. IDORA is positioned as a digital identity platform that grows into bookings, follow-up, analytics, and business conversion workflows."
     }
   ]
 
@@ -44,8 +44,8 @@ export default function FAQ() {
     <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Questions?</h2>
-          <p className="text-xl text-gray-300">Everything you need to know</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">NFC education and adoption FAQs</h2>
+          <p className="text-xl text-gray-300">Short answers for first-time buyers in the Sri Lanka market.</p>
         </div>
 
         <div className="space-y-4">

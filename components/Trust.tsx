@@ -21,11 +21,11 @@ export default function Trust() {
   ]
 
   const metrics = [
-    { value: '128+', label: 'Cards delivered islandwide' },
-    { value: '43+', label: 'Active businesses on IDORA' },
-    { value: '5,000+', label: 'Profile visits tracked' },
-    { value: '700+', label: 'Leads captured from taps' },
-    { value: '190+', label: 'Meetings booked via profile actions' }
+    { value: '25+', label: 'Cards delivered islandwide' },
+    { value: '3+', label: 'Active businesses on IDORA' },
+    { value: '1000+', label: 'Profile visits tracked' },
+    { value: '60', label: 'Leads captured from taps' },
+    { value: '30', label: 'Meetings booked via profile actions' }
   ]
 
   return (

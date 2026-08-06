@@ -3,34 +3,30 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  const totalRings = 3; // total number of rings
+  const totalRings = 3;
   const [visibleRings, setVisibleRings] = useState(0);
 
   useEffect(() => {
-    let step = 0; // 0 means all invisible
+    let step = 0;
     const interval = setInterval(() => {
-      step = (step + 1) % (totalRings + 1); // cycle: 0 → 1 → 2 → 3 → 0 → ...
+      step = (step + 1) % (totalRings + 1);
       setVisibleRings(step);
-    }, 800); // change speed here
+    }, 900);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section id="hero" className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#0B0F1A] overflow-visible">
-      
-      {/* Background glows */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
 
-      {/* Top-left rings */}
       <div className="absolute -top-24 -left-32 w-80 h-80 overflow-visible z-10">
         {visibleRings >= 1 && <div className="absolute inset-0 m-auto w-16 h-16 border-2 border-white/10 rounded-full animate-pulse"></div>}
         {visibleRings >= 2 && <div className="absolute inset-0 m-auto w-32 h-32 border-2 border-white/10 rounded-full animate-pulse"></div>}
         {visibleRings >= 3 && <div className="absolute inset-0 m-auto w-52 h-52 border-2 border-white/10 rounded-full animate-pulse"></div>}
       </div>
 
-      {/* Bottom-right rings */}
       <div className="absolute top-1/3 -right-40 w-80 h-80 overflow-visible z-10">
         {visibleRings >= 1 && <div className="absolute inset-0 m-auto w-11 h-11 border-2 border-white/10 rounded-full animate-pulse"></div>}
         {visibleRings >= 2 && <div className="absolute inset-0 m-auto w-28 h-28 border-2 border-white/10 rounded-full animate-pulse"></div>}
@@ -42,24 +38,40 @@ export default function Hero() {
           
           {/* Left Side - Content */}
           <div className="text-center lg:text-left">
-            {/* Heading */}
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-cyan-200 font-semibold px-4 py-2 rounded-full mb-6">
+              Sri Lanka's digital identity platform
+            </div>
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              Share Your Contact <br />
-              <span className="bg-gradient-to-r from-indigo-400 to-blue-200 bg-clip-text text-transparent">
-                In One Tap
+              The last business card <br />
+              <span className="bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+                you will ever need
               </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-gray-300 mb-12">
-              IDORA is now live — instantly share your profile, socials, and contact details with a smart NFC Tap Card —
-              no apps, no typing.
+            <p className="text-xl sm:text-2xl text-gray-200 mb-8">
+              IDORA helps professionals share contact details, social links, and business actions in one tap, then track real results from every interaction.
             </p>
 
-            {/* CTA */}
+            <div className="grid sm:grid-cols-3 gap-3 mb-10 text-left">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                <p className="text-sm text-gray-300">Outcome 1</p>
+                <p className="text-white font-semibold">Never lose a customer after first contact</p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                <p className="text-sm text-gray-300">Outcome 2</p>
+                <p className="text-white font-semibold">Turn every handshake into a lead</p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-3">
+                <p className="text-sm text-gray-300">Outcome 3</p>
+                <p className="text-white font-semibold">Make first impressions instant and modern</p>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#pricing"
-                className="bg-gradient-to-r from-[#00193e] to-[#008cffdb] text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition text-center"
+                className="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black px-10 py-4 rounded-full text-lg font-bold shadow-xl hover:scale-105 transition text-center"
               >
                 Get Your IDORA Card
               </a>
@@ -68,14 +80,13 @@ export default function Hero() {
                 href="#how-it-works"
                 className="border border-white/20 text-white px-10 py-4 rounded-full text-lg font-semibold backdrop-blur hover:bg-white/10 transition text-center"
               >
-                See How It Works
+                Watch 10-Second Demo
               </a>
             </div>
           </div>
 
           {/* Right Side - Card & Stage Image */}
           <div className="flex flex-col items-center gap-8 lg:gap-8">
-            {/* 3D Rotating Card: Front and Back */}
             <div className="relative w-80 h-48 perspective-1000">
               <div className="absolute inset-0 flip-rotate-card">
                 <div className="flip-card-inner">
@@ -103,14 +114,31 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Stage Image */}
+            <div className="w-full max-w-md bg-white/5 border border-white/15 rounded-2xl p-5">
+              <p className="text-cyan-200 font-semibold mb-3">10-second product story</p>
+              <div className="space-y-2 text-sm sm:text-base">
+                {[
+                  "Tap card",
+                  "Profile opens",
+                  "Contact saved",
+                  "Lead captured",
+                  "Follow-up starts"
+                ].map((item, index) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="w-6 h-6 rounded-full bg-cyan-500 text-black font-bold text-xs flex items-center justify-center">{index + 1}</span>
+                    <span className="text-gray-100">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="flex justify-center">
               <Image
                 src="/images/hore.png"
                 alt="Tap Card Preview"
                 width={260}
                 height={120}
-                className="rounded-xl"
+                className="rounded-xl border border-white/15"
                 priority
               />
             </div>

@@ -1,40 +1,40 @@
 export default function UseCases() {
   const cases = [
     {
-      title: "Freelancers & Creatives",
-      description: "Share your portfolio, WhatsApp, and booking links in one tap. Perfect for photographers, designers, and consultants.",
+      title: "Realtors",
+      description: "Turn every property visit into a saved contact, captured lead, and follow-up opportunity before the client leaves.",
       icon: "/images/palette.png",
-      color: "from-red-700 to-rose-400"
+      color: "from-cyan-700 to-blue-400"
     },
     {
-      title: "Events & Networking",
-      description: "No more fumbling with paper cards. Share your details instantly at conferences, meetups, and trade shows.",
+      title: "Agencies and Teams",
+      description: "Give every team member a premium digital profile while preserving a single brand standard and faster inbound conversion.",
       icon: "/images/users.png",
-      color: "from-blue-700 to-purple-200"
+      color: "from-emerald-700 to-cyan-300"
     },
     {
-      title: "Reception Desks",
-      description: "Let visitors check in by tapping. Collect their details automatically without filling forms.",
+      title: "Cafes and Retail",
+      description: "Customers tap once to open menu, location, social links, and review actions without waiting or scanning under bad light.",
       icon: "/images/building.png",
-      color: "from-green-700 to-teal-500"
+      color: "from-orange-500 to-yellow-300"
     },
     {
-      title: "Cafes & Restaurants",
-      description: "Place your IDORA card on tables. Customers tap to save your contact, follow on social media, or leave a review.",
+      title: "Freelancers and Creators",
+      description: "Share portfolio, booking links, WhatsApp, and socials from one page so meetings become direct project conversations.",
       icon: "/images/coffee.png",
-      color: "from-orange-400 to-red-500"
+      color: "from-purple-600 to-pink-400"
     },
     {
-      title: "Sales Teams",
-      description: "Close deals faster. Share catalogs, price lists, and contact info without delays.",
+      title: "Sales Professionals",
+      description: "Capture lead details quickly, update status in your pipeline, and keep follow-up momentum after each conversation.",
       icon: "/images/briefcase.png",
-      color: "from-white to-yellow-900"
+      color: "from-sky-500 to-indigo-300"
     },
     {
-      title: "Small Businesses",
-      description: "Perfect for boutiques, salons, gyms, clinics. Make every customer interaction memorable.",
+      title: "Founders and Operators",
+      description: "Present a verified, modern first impression that can evolve from contact sharing to bookings, payments, and analytics.",
       icon: "/images/store.png",
-      color: "from-yellow-400 to-orange-500"
+      color: "from-lime-500 to-emerald-300"
     }
   ];
 
@@ -42,21 +42,21 @@ export default function UseCases() {
     <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B0F1A] to-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Who Uses IDORA?</h2>
-          <p className="text-xl text-gray-300">Smart professionals across Sri Lanka</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Real-world conversion stories</h2>
+          <p className="text-xl text-gray-300">IDORA fits the moments where first impressions decide revenue.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {cases.map((useCase, index) => (
             <div key={index} className="group h-full">
               <div
-                className="relative h-full flex flex-col rounded-2xl p-6 transition-all duration-300 bg-gradient-to-br from-indigo-900/50 via-gray-800/50 to-blue-900/50 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 ring-2 ring-indigo-400/30 backdrop-blur-sm"
+                className="relative h-full flex flex-col rounded-2xl p-6 transition-all duration-300 bg-gradient-to-br from-slate-900/80 via-gray-800/60 to-cyan-950/60 border border-white/15 hover:border-cyan-300/40 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-[1.02] backdrop-blur-sm"
               >
                 <>
-                  <div className="absolute -top-3 -right-3 flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                    <span className="uppercase tracking-wider">✅ Active</span>
+                  <div className="absolute -top-3 -right-3 flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-400 text-black text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                    <span className="uppercase tracking-wider">Live Use Case</span>
                   </div>
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-500/5 to-transparent rounded-2xl pointer-events-none"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl pointer-events-none"></div>
                 </>
 
                 <div
@@ -82,7 +82,7 @@ export default function UseCases() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-300 text-lg mb-6">Used by businesses in Colombo, Kandy, Galle, and beyond</p>
+          <p className="text-gray-300 text-lg mb-6">From networking events to retail counters, each tap becomes a measurable business touchpoint.</p>
         </div>
       </div>
     </section>

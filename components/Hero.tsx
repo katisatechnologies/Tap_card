@@ -55,16 +55,16 @@ export default function Hero() {
 
             <div className="grid sm:grid-cols-3 gap-3 mb-10 text-left">
               <div className="bg-white/5 border border-white/10 rounded-xl p-3">
-                <p className="text-sm text-gray-300">Outcome 1</p>
-                <p className="text-white font-semibold">Never lose a customer after first contact</p>
+                <p className="text-sm text-gray-300">More saved contacts</p>
+                <p className="text-white font-semibold">Prospects keep your details the moment you meet</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-3">
-                <p className="text-sm text-gray-300">Outcome 2</p>
-                <p className="text-white font-semibold">Turn every handshake into a lead</p>
+                <p className="text-sm text-gray-300">Faster follow-up</p>
+                <p className="text-white font-semibold">Lead capture starts while interest is still high</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-3">
-                <p className="text-sm text-gray-300">Outcome 3</p>
-                <p className="text-white font-semibold">Make first impressions instant and modern</p>
+                <p className="text-sm text-gray-300">Premium first impression</p>
+                <p className="text-white font-semibold">One modern profile for contact, socials, and actions</p>
               </div>
             </div>
 

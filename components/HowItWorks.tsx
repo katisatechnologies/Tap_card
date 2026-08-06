@@ -74,7 +74,7 @@ export default function HowItWorks() {
 
         <div className="mt-14 grid lg:grid-cols-2 gap-8 items-stretch">
           <div className="bg-white/5 border border-white/15 rounded-2xl p-6">
-            <h3 className="text-2xl font-bold text-white mb-4">Use these demo scenes in ads</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">How businesses use IDORA in real life</h3>
             <div className="space-y-3">
               {demoIdeas.map((idea) => (
                 <div key={idea} className="flex items-start gap-3 rounded-xl bg-black/20 border border-white/10 p-3">
@@ -86,12 +86,12 @@ export default function HowItWorks() {
           </div>
 
           <div className="bg-white/5 border border-white/15 rounded-2xl p-6">
-            <h3 className="text-2xl font-bold text-white mb-4">Education first for Sri Lanka</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Built for fast adoption in Sri Lanka</h3>
             <p className="text-gray-200 mb-4">
-              Most people adopt after seeing the tap moment in real life. Lead with short demos, then explain compatibility and backup QR.
+              Buyers usually decide after one live tap. IDORA keeps this simple with NFC convenience and a QR fallback when needed.
             </p>
             <p className="text-cyan-200 font-semibold">
-              Video sells this product faster than feature paragraphs.
+              Zero app install. Zero typing. One clean first impression.
             </p>
           </div>
         </div>

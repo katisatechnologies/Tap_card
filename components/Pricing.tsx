@@ -40,28 +40,28 @@ const plans: Plan[] = [
   {
     name: 'Silver',
     subtitle: 'Pipeline operations',
-    price: 'Coming soon',
+    price: 'Custom quote',
     bestFor: 'Users tracking sales outcomes and follow-up process',
     highlights: [
       'Structured lead status and priority management',
       'Timeline notes for relationship context',
       'CSV export for reporting and CRM workflows'
     ],
-    cta: 'Join Waitlist',
-    whatsappLink: 'https://wa.me/94701200064?text=Hi!%20Please%20add%20me%20to%20the%20Silver%20IDORA%20waitlist.'
+    cta: 'Talk to Sales',
+    whatsappLink: 'https://wa.me/94701200064?text=Hi!%20I%20want%20a%20custom%20quote%20for%20the%20Silver%20IDORA%20plan.%20Please%20share%20deployment%20options.'
   },
   {
     name: 'Platinum',
     subtitle: 'Executive conversion suite',
-    price: 'Coming soon',
+    price: 'Custom quote',
     bestFor: 'High-trust profiles with deeper engagement insights',
     highlights: [
       'Executive personalization and trust signals',
       'Premium engagement features and advanced CTA layer',
       'Profile view analytics for growth decisions'
     ],
-    cta: 'Join Waitlist',
-    whatsappLink: 'https://wa.me/94701200064?text=Hi!%20Please%20add%20me%20to%20the%20Platinum%20IDORA%20waitlist.'
+    cta: 'Book Strategy Call',
+    whatsappLink: 'https://wa.me/94701200064?text=Hi!%20I%20need%20a%20Platinum%20IDORA%20consultation%20for%20my%20business.%20Please%20share%20next%20steps.'
   }
 ]
 
@@ -73,9 +73,9 @@ export default function Pricing() {
           <div className="inline-block bg-gradient-to-r from-cyan-500 to-emerald-500 text-black text-sm font-bold px-4 py-2 rounded-full mb-4">
             Package-Based Value Ladder
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Will people pay LKR 4,700 to 5,500?</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Packages built for outcomes, not just features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Yes, when positioning is outcome-first: faster first impressions, more saved contacts, and measurable lead conversion after every meeting.
+            Start with the package that matches your sales process. Upgrade when you need deeper lead tracking, team workflows, and executive personalization.
           </p>
         </div>
 
@@ -123,6 +123,13 @@ export default function Pricing() {
               </a>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-white/15 bg-white/5 p-6 text-center">
+          <p className="text-white font-semibold mb-2">What you can expect after ordering</p>
+          <p className="text-gray-300 text-sm sm:text-base">
+            Founder-led onboarding, card activation support, and step-by-step setup guidance for your profile and conversion actions.
+          </p>
         </div>
       </div>
     </section>

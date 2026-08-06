@@ -91,7 +91,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Share Your Contact in One Tap
+            Make every handshake a lead
           </motion.p>
 
           {/* NFC Wave animation */}

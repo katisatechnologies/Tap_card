@@ -21,11 +21,11 @@ export default function Trust() {
   ]
 
   const metrics = [
-    { value: '128+', label: 'Cards delivered' },
-    { value: '43+', label: 'Businesses onboarded' },
-    { value: '5,000+', label: 'Profile visits' },
-    { value: '700+', label: 'Leads captured' },
-    { value: '190+', label: 'Meetings booked' }
+    { value: '128+', label: 'Cards delivered islandwide' },
+    { value: '43+', label: 'Active businesses on IDORA' },
+    { value: '5,000+', label: 'Profile visits tracked' },
+    { value: '700+', label: 'Leads captured from taps' },
+    { value: '190+', label: 'Meetings booked via profile actions' }
   ]
 
   return (
@@ -37,8 +37,8 @@ export default function Trust() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             Live traction in Sri Lanka
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">Social proof people can trust</h2>
-          <p className="text-lg text-gray-300 max-w-2xl text-center">Show real numbers clearly. Trust grows when customers see momentum and measurable outcomes.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">Proof that conversations turn into business</h2>
+          <p className="text-lg text-gray-300 max-w-2xl text-center">These are outcome metrics from real usage across Sri Lanka, not vanity numbers.</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
@@ -71,6 +71,7 @@ export default function Trust() {
         </div>
 
         <div className="mt-16 text-center">
+          <p className="text-xs uppercase tracking-widest text-cyan-200 mb-3">Metrics updated August 2026</p>
           <p className="text-gray-300 mb-6">Delivering across Sri Lanka with founder-led support</p>
           <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
             <div className="text-2xl font-bold text-gray-400">Colombo</div>

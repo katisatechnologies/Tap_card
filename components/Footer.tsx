@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">IDORA</h3>
-            <p className="text-white/70">Modern contact sharing for Sri Lankan businesses</p>
+            <p className="text-white/70">Sri Lanka's digital identity and lead conversion platform</p>
           </div>
 
           <div>
@@ -112,7 +112,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © 2025 IDORA. All rights reserved.
+            © 2026 IDORA. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-white/60 hover:text-white transition">

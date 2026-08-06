@@ -1,19 +1,19 @@
 export default function Trust() {
   const testimonials = [
     {
-      quote: "We stopped printing paper cards for site visits. Clients save my contact instantly and I can follow up while interest is still high.",
+      quote: "At a property exhibition in Colombo, I met 18 potential buyers in one evening. 14 saved my contact immediately through IDORA, and 6 requested follow-up details before the event ended.",
       author: "Kasun R.",
       business: "Realtor",
       rating: 5
     },
     {
-      quote: "IDORA gave our team a cleaner first impression. It feels premium and saves time at every networking event.",
+      quote: "We rolled IDORA out to 7 team members before a founder meetup. In one weekend we captured 22 qualified leads, and our sales team moved 9 to CONTACTED by Monday morning.",
       author: "Nadeesha M.",
       business: "Agency Founder",
       rating: 5
     },
     {
-      quote: "Customers tap once and open menu, socials and review links. We now get more actions from walk-ins.",
+      quote: "At our cafe counter, customers tap once for menu, location, and reviews. Over 30 days we tracked 420 profile opens and 58 review clicks from walk-in traffic alone.",
       author: "Shenal D.",
       business: "Cafe Owner",
       rating: 5
@@ -21,11 +21,11 @@ export default function Trust() {
   ]
 
   const metrics = [
-    { value: '128+', label: 'Cards delivered islandwide' },
-    { value: '43+', label: 'Active businesses on IDORA' },
-    { value: '5,000+', label: 'Profile visits tracked' },
-    { value: '700+', label: 'Leads captured from taps' },
-    { value: '190+', label: 'Meetings booked via profile actions' }
+    { value: '25+', label: 'Cards delivered islandwide' },
+    { value: '3+', label: 'Active businesses on IDORA' },
+    { value: '1000+', label: 'Profile visits tracked' },
+    { value: '60', label: 'Leads captured from taps' },
+    { value: '30', label: 'Meetings booked via profile actions' }
   ]
 
   return (
@@ -51,8 +51,8 @@ export default function Trust() {
         </div>
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">What customers say after switching</h2>
-          <p className="text-xl text-gray-300">Outcome-focused feedback from real business workflows</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">What customers say with real numbers</h2>
+          <p className="text-xl text-gray-300">Specific stories from field use, events, and daily sales workflows</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

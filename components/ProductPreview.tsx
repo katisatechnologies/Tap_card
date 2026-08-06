@@ -20,7 +20,7 @@ const featureGroups = [
     points: [
       'Visitor lead capture from your profile page',
       'Dashboard pipeline with NEW, CONTACTED, INTERESTED, WON, LOST',
-      'Priority tags, timeline notes, and AI follow-up suggestions'
+      'Priority tags, timeline notes, and AI follow-up suggestions (Coming Soon)'
     ]
   },
   {

@@ -25,8 +25,16 @@ const comparisons = [
     { label: "Lead capture form from every profile visit", icon: "02" },
     { label: "Dashboard with live mobile preview", icon: "03" },
     { label: "Lead statuses: NEW, CONTACTED, INTERESTED, WON, LOST", icon: "04" },
-    { label: "AI-assisted follow-up suggestions", icon: "05" },
+    { label: "AI-assisted follow-up suggestions (Coming Soon)", icon: "05" },
     { label: "View analytics and CSV lead export", icon: "06" },
+  ]
+
+  const comparisonRows = [
+    { feature: "Update details anytime", paper: "No", qr: "Limited", idora: "Yes" },
+    { feature: "One-tap contact save", paper: "No", qr: "No", idora: "Yes" },
+    { feature: "Lead capture", paper: "No", qr: "No", idora: "Yes" },
+    { feature: "Analytics", paper: "No", qr: "No", idora: "Yes" },
+    { feature: "Professional profile", paper: "No", qr: "Basic", idora: "Yes" }
   ]
 
   return (
@@ -65,6 +73,36 @@ const comparisons = [
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mb-16 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+          <div className="px-6 sm:px-8 py-6 border-b border-white/10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Why businesses choose IDORA faster</h3>
+            <p className="text-gray-300">A quick comparison for busy decision makers who need results after first contact.</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[680px] text-left">
+              <thead>
+                <tr className="bg-white/5">
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-200">Feature</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-200">Paper Card</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-200">QR Code</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-cyan-200">IDORA</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row) => (
+                  <tr key={row.feature} className="border-t border-white/10">
+                    <td className="px-6 py-4 text-white font-medium">{row.feature}</td>
+                    <td className="px-6 py-4 text-gray-300">{row.paper}</td>
+                    <td className="px-6 py-4 text-gray-300">{row.qr}</td>
+                    <td className="px-6 py-4 text-cyan-200 font-semibold">{row.idora}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="bg-dark rounded-3xl p-8 sm:p-12 border border-white/10">

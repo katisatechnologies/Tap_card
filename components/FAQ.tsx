@@ -28,7 +28,7 @@ export default function FAQ() {
     },
     {
       question: "How does IDORA help with lead follow-up?",
-      answer: "Visitors can submit lead details directly from your profile. In the dashboard you can manage statuses, priorities, timeline notes, and AI-assisted follow-up suggestions."
+      answer: "Visitors can submit lead details directly from your profile. In the dashboard you can manage statuses, priorities, and timeline notes today. AI-assisted follow-up suggestions are marked as Coming Soon."
     },
     {
       question: "Can teams and agencies use IDORA at scale?",
